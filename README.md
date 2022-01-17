@@ -1,11 +1,46 @@
-#Personal Portfolio
+![](https://img.shields.io/badge/Microverse-blueviolet)
 
-It has Header with navigation bar in it and Welcome page
+# PERSONAL PORTFOLIO
 
-Used Template №5 
+> It demonstrates information about the project I have made so far and about me and the way to contact me.
 
-Author of the project:
-  Allamurotov Firdavs
+![screenshot](./images/Mobile-version.png)
+![screenshot](./images/Desktop.png)
 
-  ## Link to my Project
- [Live Demo Link](https://fed1k.github.io/) 
+It is a show of my understanding of Gitflow, use of Linters, HTML5 semantics, CSS3 flexbox.
+
+## Built With
+
+- HTML-5
+- CSS3
+- Linters
+- Formspree - form data handler
+
+## Live Demo
+Live site URL to portfolio
+[Live Demo Link](https://fed1k.github.io/)
+
+
+## Getting Started
+
+
+- To get a local copy up and running follow these simple example steps.
+
+### Prerequisites
+
+- You only need a browser to run the html file in.
+
+### Setup
+
+- Create a new folder to store the files in.
+
+### Install
+
+- Open your command prompt or terminal and run.
+- git clone git@github.com:fed1k/fed1k.github.io.git
+
+
+### Run tests
+
+- To run tests run :
+- npx hint .
