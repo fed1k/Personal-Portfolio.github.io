@@ -1,0 +1,621 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /* width: 100vw; */
+}
+
+/* Navigation starts */
+.navbar {
+  background: url(images/image-geometry-1.png);
+  background-repeat: no-repeat;
+  display: flex;
+  height: 95px;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.navbar ul {
+  display: none;
+}
+
+.thor-img {
+  display: none;
+}
+
+/* Welcome section starts */
+.section {
+  background: url(images/image-geometry-2.png);
+  background-size: 100vw;
+  background-repeat: no-repeat;
+  background-position-y: 400px;
+  display: flex;
+  flex-direction: column;
+  height: 650px;
+  align-items: center;
+  gap: 25px;
+}
+
+p {
+  font-family: Poppins, serif;
+  width: 90%;
+  font-weight: 400;
+  font-size: 14px;
+  padding: 25px 13px;
+  margin: 0;
+}
+
+.section h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 40px;
+  font-weight: 400;
+  width: 90%;
+  margin-left: 5%;
+}
+
+.start {
+  font-family: Poppins, serif;
+  font-weight: 500;
+  width: 95vw;
+  color: #ffff;
+  background-color: #1a2236;
+  height: 50px;
+  margin-left: 3%;
+}
+
+/* Button hovers */
+.start:hover {
+  background-color: #ffff;
+  color: #1a2236;
+  cursor: pointer;
+}
+
+.start:active {
+  border: 2px solid #1a2236;
+  cursor: pointer;
+}
+
+#menu-icon {
+  width: 8vw;
+  height: 20px;
+}
+
+/* Projects section start here */
+.projects {
+  display: grid;
+  grid-template-columns: 100%;
+}
+
+#pro-img {
+  display: none;
+}
+
+.projects h2 {
+  font-family: Playfair Display, serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 50px;
+  padding-left: 15px;
+}
+
+#img-dots {
+  display: none;
+}
+
+.images {
+  width: 100vw;
+  height: 186px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  background-color: #1a2236;
+  font-family: Poppins, serif;
+  font-weight: 300;
+  font-style: normal;
+  color: #fff;
+  height: 336px;
+}
+
+.card h2 {
+  font-family: Poppins, serif;
+  font-weight: 300;
+  font-size: 20px;
+  padding-top: 15px;
+}
+
+.card ul {
+  display: flex;
+  gap: 8px;
+  padding-left: 15px;
+}
+
+.card ul li {
+  text-align: center;
+  font-size: 10px;
+  list-style: none;
+  padding: 5px;
+  background-color: #98dede;
+  color: #324556;
+}
+
+.see {
+  height: 34px;
+  width: 65vw;
+  align-self: flex-start;
+  font-family: Poppins, serif;
+  font-weight: 500;
+  background-color: inherit;
+  border: 1px solid white;
+  color: #fff;
+  margin-top: 12px;
+  margin-left: 14px;
+}
+
+/* Button hovers */
+.see:hover {
+  background-color: #ffff;
+  color: #1a2236;
+  cursor: pointer;
+}
+
+.see:active {
+  border: 2px solid #1a2236;
+  cursor: pointer;
+}
+
+/* About Section */
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 40px;
+  background-color: #fff;
+}
+
+.about h2 {
+  font-family: Playfair Display, serif;
+  font-weight: 400;
+  font-size: 50px;
+  padding: 0 0 13px 35px;
+  align-self: flex-start;
+}
+
+.about p {
+  align-self: center;
+  width: 88vw;
+  height: 200px;
+}
+
+.about-desktop {
+  display: none;
+}
+
+#dot {
+  display: none;
+}
+
+.about button {
+  font-family: Poppins, serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 16px;
+  color: #ffff;
+  background-color: #1a2236;
+  height: 50px;
+  width: 90vw;
+}
+
+/* Button hovers */
+.about button:hover {
+  background-color: #ffff;
+  color: #1a2236;
+}
+
+.about button:visited {
+  border: 2px solid #1a2236;
+}
+
+/* Skills section */
+.skills {
+  height: 900px;
+  display: grid;
+  grid-template-columns: 295px;
+  justify-content: center;
+  align-items: flex-end;
+  padding-top: 40px;
+  margin-bottom: 50px;
+}
+
+.skill1 {
+  background: #1c528a;
+}
+
+.skill2 {
+  background: #e2505c;
+}
+
+.skill3 {
+  background: #febf52;
+}
+
+.skills ul {
+  padding: 50px 50px 53px 50px;
+}
+
+.skills ul li {
+  font-family: Poppins, serif;
+  font-weight: 600;
+  color: #fff;
+  align-self: center;
+  list-style-position: inside;
+}
+
+.leader {
+  width: 180px;
+  list-style: none;
+  font-family: Poppins, serif;
+  color: #fff;
+  font-weight: 800;
+  font-size: 20px;
+  padding-bottom: 21px;
+}
+
+/* Footer starts here */
+.footer {
+  background: url(images/image-geometry-1.png) no-repeat;
+}
+
+.form {
+  margin: 5%;
+  display: flex;
+  flex-direction: column;
+  background-color: #f9f9fa;
+  gap: 8px;
+}
+
+.footer h2 {
+  padding: 106px 53px 15px 18px;
+  font-family: Playfair Display, serif;
+  font-weight: 400;
+  font-size: 50px;
+}
+
+.lorem {
+  font-family: Poppins, serif;
+  font-weight: 400;
+  font-size: 14px;
+  padding: 0 0 32px 18px;
+}
+
+.skill3 img {
+  display: none;
+}
+
+#last-img {
+  display: none;
+}
+
+#name,
+#email {
+  gap: 10px;
+  width: 288px;
+  height: 52px;
+  border: 1px solid #dfdfe0;
+  border-radius: 4px;
+  font-family: Poppins, serif;
+  font-weight: 400;
+}
+
+#email {
+  border: 1px solid #1a2236;
+}
+
+#comment {
+  width: 288px;
+  height: 112px;
+  padding: 0 14px 20px 18px;
+  font-family: Poppins, serif;
+  font-weight: 400;
+}
+
+.form-button {
+  width: 288px;
+  height: 44px;
+  background-color: #1a2236;
+  color: #fff;
+  font-family: Poppins, serif;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.form-button:hover {
+  background-color: #ffff;
+  color: #1a2236;
+  cursor: pointer;
+}
+
+.form-button:active {
+  border: 2px solid #1a2236;
+  cursor: pointer;
+}
+
+#contact {
+  padding-top: 64px;
+  width: 320px;
+  height: 150px;
+  background-color: #1a2236;
+  color: #fff;
+}
+
+i {
+  padding-left: 29px;
+  color: #fff;
+}
+
+#contact p {
+  padding-left: 20px;
+  font-family: Poppins, serif;
+  font-weight: 500;
+  font-size: 16px;
+  padding-bottom: 20px;
+}
+
+/* Desktop version starts here */
+@media (min-width: 992px) {
+  /* Navbar starts here */
+  .navbar {
+    width: 100%;
+    height: 100px;
+    justify-content: center;
+    background: url(images/Rectangle-37.png) no-repeat;
+  }
+
+  #menu-icon {
+    display: none;
+  }
+
+  .navbar ul {
+    display: flex;
+  }
+
+  .skills ul li {
+    font-size: 15px;
+  }
+
+  .navbar ul li {
+    padding: 0 15px;
+    list-style: none;
+    font-family: Poppins, serif;
+    font-weight: 400;
+  }
+
+  .navbar ul li:hover {
+    cursor: pointer;
+    text-decoration: underline;
+  }
+
+  /* Welcome section starts here */
+  .section {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    background-image: none;
+  }
+
+  .start {
+    width: 254px;
+    height: 70px;
+    transition: all 0.6s ease-in-out;
+  }
+
+  .start:hover {
+    width: 260px;
+    height: 75px;
+    transform: scale(1.1);
+    border-radius: 20px;
+  }
+
+  .welcome-section {
+    width: 100px;
+    padding: 192px 0 0 40px;
+    display: inline;
+  }
+
+  .welcome-section,
+  .thor-img {
+    display: block;
+    float: right;
+  }
+
+  .welcome-section h1 {
+    font-size: 110px;
+    padding-bottom: 20px;
+    margin: 0;
+    animation: fullname 3s ease-in-out 0s 1;
+  }
+
+  @keyframes fullname {
+    0% { opacity: 0; }
+    25% { opacity: 0.1; }
+    50% { opacity: 0.3; }
+    75% { opacity: 0.5; }
+    100% { opacity: 0.7; }
+  }
+
+  .thor {
+    width: 720px;
+    height: 877px;
+  }
+
+  .welcome-section p {
+    width: 484px;
+    padding-bottom: 30px;
+  }
+
+  /* Projects start here */
+  .projects {
+    display: none;
+  }
+
+  .skills {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 289px 289px;
+  }
+
+  #pro-img {
+    width: 100%;
+    display: block;
+    margin-top: 450px;
+  }
+
+  #contact {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding-right: 130px;
+  }
+
+  .about p {
+    width: 446px;
+    height: auto;
+    margin: 0;
+    padding: 10px 0;
+  }
+
+  #contact p {
+    font-size: 18px;
+  }
+
+  i {
+    font-size: 20px;
+    color: #fff;
+  }
+
+  .footer h2 {
+    font-size: 110px;
+    padding-bottom: 30px;
+  }
+
+  .form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-row-gap: 30px;
+    width: 542px;
+    margin: 0;
+  }
+
+  #comment {
+    grid-column: span 2;
+    width: 542px;
+    height: 140px;
+  }
+
+  .form-button {
+    height: 70px;
+    position: relative;
+    left: 45%;
+    transition: all 0.6s ease-in-out;
+  }
+
+  .form-button:hover {
+    transform: scale(1.1);
+    border-radius: 20px;
+  }
+
+  .lorem {
+    width: 548px;
+    padding: 0;
+    margin: 0;
+  }
+
+  .footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url(images/image-geometry-6.png);
+    background-size: 15%;
+    background-color: #f9f9fa;
+  }
+
+  #last-img {
+    display: inline;
+    float: left;
+  }
+
+  #last-img-container {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  #email,
+  #name {
+    width: 253px;
+  }
+
+  .container {
+    display: flex;
+    justify-content: center;
+    flex-direction: row-reverse;
+    margin-top: 15%;
+  }
+
+  .about {
+    display: block;
+    padding-left: 3%;
+    font-size: 110px;
+    font-family: Playfair Display, serif;
+    font-weight: 400;
+  }
+
+  .about h2 {
+    font-family: Playfair Display, serif;
+    font-weight: 400;
+    font-size: 110px;
+    padding: 0;
+  }
+
+  .skills ul li:first-child {
+    font-size: 20px;
+    font-weight: 800;
+  }
+
+  .about button {
+    width: 254px;
+    height: 70px;
+    background-color: #1a2236;
+    color: #fff;
+    font-family: Poppins, serif;
+    font-weight: 500;
+    font-size: 18px;
+    transition: all 0.6s ease-in-out;
+  }
+
+  .about button:hover {
+    width: 260px;
+    height: 75px;
+    transform: scale(1.1);
+    border-radius: 20px;
+    cursor: pointer;
+  }
+
+  #dot {
+    display: block;
+    margin: auto;
+    padding-top: 68px;
+  }
+
+  .skills section {
+    height: 289px;
+  }
+}

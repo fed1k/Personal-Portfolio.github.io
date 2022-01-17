@@ -1,37 +1,46 @@
-## Welcome to GitHub Pages
+![](https://img.shields.io/badge/Microverse-blueviolet)
 
-You can use the [editor on GitHub](https://github.com/fed1k/fed1k.github.io/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
+# PERSONAL PORTFOLIO
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+> It demonstrates information about the project I have made so far and about me and the way to contact me.
 
-### Markdown
+![screenshot](./images/Mobile-version.png)
+![screenshot](./images/Desktop.png)
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+It is a show of my understanding of Gitflow, use of Linters, HTML5 semantics, CSS3 flexbox.
 
-```markdown
-Syntax highlighted code block
+## Built With
 
-# Header 1
-## Header 2
-### Header 3
+- HTML-5
+- CSS3
+- Linters
+- Formspree - form data handler
 
-- Bulleted
-- List
+## Live Demo
+Live site URL to portfolio
+[Live Demo Link](https://fed1k.github.io/)
 
-1. Numbered
-2. List
 
-**Bold** and _Italic_ and `Code` text
+## Getting Started
 
-[Link](url) and ![Image](src)
-```
 
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
+- To get a local copy up and running follow these simple example steps.
 
-### Jekyll Themes
+### Prerequisites
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/fed1k/fed1k.github.io/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+- You only need a browser to run the html file in.
 
-### Support or Contact
+### Setup
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+- Create a new folder to store the files in.
+
+### Install
+
+- Open your command prompt or terminal and run.
+- git clone git@github.com:fed1k/fed1k.github.io.git
+
+
+### Run tests
+
+- To run tests run :
+- npx hint .
