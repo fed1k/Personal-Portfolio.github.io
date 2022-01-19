@@ -249,7 +249,7 @@ p {
 .skills ul li {
   font-family: Poppins, serif;
   font-weight: 600;
-  color: #fff;
+  color: hsl(0,0%,41%);
   align-self: center;
   list-style-position: inside;
   width: 200px;
@@ -259,7 +259,7 @@ p {
   width: 180px;
   list-style: none;
   font-family: Poppins, serif;
-  color: #fff;
+  color: hsl(0,0%,41%);
   font-weight: 800;
   font-size: 20px;
   padding-bottom: 21px;
