@@ -236,10 +236,12 @@ p {
 
 .skill2 {
   background: #e2505c;
+  background-color: hsl(354, 54%, 53%);
 }
 
 .skill3 {
   background: #febf52;
+  background-color: hsl(37, 50%, 33%);
 }
 
 .skills ul {
@@ -249,6 +251,7 @@ p {
 .skills ul li {
   font-family: Poppins, serif;
   font-weight: 600;
+  color: hsl(0, 0%, 41%);
   color: #fff;
   align-self: center;
   list-style-position: inside;
@@ -259,7 +262,7 @@ p {
   width: 180px;
   list-style: none;
   font-family: Poppins, serif;
-  color: #fff;
+  color: hsl(0, 0%, 41%);
   font-weight: 800;
   font-size: 20px;
   padding-bottom: 21px;
@@ -409,8 +412,7 @@ a {
   .section {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    background-image: url(images/Thur.png),
-    url(images/image-dots-with-teal.png);
+    background-image: url(images/Thur.png), url(images/image-dots-with-teal.png);
     background-size: 50%, 20%;
     background-position: right, 43% 100%;
     height: 950px;
