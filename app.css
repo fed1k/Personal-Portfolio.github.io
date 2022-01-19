@@ -240,6 +240,7 @@ p {
 
 .skill3 {
   background: #febf52;
+  background-color: hsl(37, 50%, 33%);
 }
 
 .skills ul {
@@ -249,7 +250,7 @@ p {
 .skills ul li {
   font-family: Poppins, serif;
   font-weight: 600;
-  color: hsl(0,0%,41%);
+  color: #fff;
   align-self: center;
   list-style-position: inside;
   width: 200px;
