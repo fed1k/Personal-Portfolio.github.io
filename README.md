@@ -15,6 +15,7 @@ It is a show of my understanding of Gitflow, use of Linters, HTML5 semantics, CS
 - CSS3
 - Linters
 - Formspree - form data handler
+- Javascript
 
 ## Live Demo
 Live site URL to portfolio
