@@ -1,36 +1,98 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins:wght@300;400;500;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins:wght@300;400;500;600&display=swap");
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 /* Navigation starts */
 .navbar {
-  background: url(images/image-geometry-1.png);
-  background-repeat: no-repeat;
   display: flex;
-  height: 95px;
-  justify-content: flex-end;
-  align-items: center;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.nav-icon {
+  position: fixed;
+  align-self: flex-end;
+  padding-bottom: 10em;
+  margin: 20px;
+  z-index: 9999;
+}
+
+.nav-icon div {
+  width: 25px;
+  height: 4px;
+  background-color: #000;
+  margin: 4px;
+  transition: all 0.3s ease;
+}
+
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2 {
+  opacity: 0;
+}
+
+.toggle .line3 {
+  transform: rotate(45deg) translate(-5px, -6px);
 }
 
 .navbar ul {
-  display: none;
+  list-style-type: none;
+}
+
+.toggleUl {
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  color: #fff;
+  opacity: 0.95;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  transform: translateY(-100%);
+  background: url(images/toggle1.png), url(images/toggle2.png);
+  background-repeat: no-repeat;
+  background-color: #fff;
+  background-size: 300px;
+  background-position-y: top, bottom;
+  line-height: 40px;
+  font-family: Poppins, serif;
+  font-weight: 400;
+}
+
+.nav-active {
+  transform: translateY(0);
+}
+
+.scrolList {
+  cursor: pointer;
+  list-style: none;
+}
+
+.scrolList a {
+  text-decoration: none;
+  color: black;
 }
 
 /* Welcome section starts */
 .section {
-  background: url(images/image-geometry-2.png);
-  background-size: 80% 20%;
+  background-image:
+    url(images/image-geometry-2.png),
+    url(images/image-geometry-1.png);
+  background-size: 320px, 130px;
   background-repeat: no-repeat;
-  background-position-y: 80%;
-  background-position-x: center;
+  background-position-y: 90%, 0;
+  background-position-x: 50%, 0;
   display: flex;
   flex-direction: column;
-  height: 650px;
+  height: 700px;
   align-items: center;
   gap: 25px;
 }
@@ -45,17 +107,18 @@ p {
 }
 
 .section h1 {
-  font-family: 'Playfair Display', serif;
+  font-family: "Playfair Display", serif;
   font-size: 40px;
   font-weight: 400;
   width: 90%;
   margin-left: 5%;
+  padding-top: 100px;
 }
 
 .start {
   font-family: Poppins, serif;
   font-weight: 500;
-  width: 95vw;
+  width: 300px;
   color: #ffff;
   background-color: #1a2236;
   height: 50px;
@@ -74,14 +137,19 @@ p {
   cursor: pointer;
 }
 
-#menu-icon {
+#menu-icon,
+.x-sign {
   width: 8vw;
-  height: 20px;
+  margin-right: 20px;
+}
+
+.x-sign {
+  display: none;
 }
 
 /* Projects section start here */
 .projects {
-  width: 100%;
+  /* width: 100%; */
   display: grid;
   grid-template-columns: 1fr;
 }
@@ -91,7 +159,7 @@ p {
 }
 
 .projects h2 {
-  font-family: Playfair Display, serif;
+  font-family: "Playfair Display", serif;
   font-weight: 400;
   font-style: normal;
   font-size: 50px;
@@ -108,10 +176,9 @@ p {
 }
 
 .card {
-  width: 100%;
+  /* width: 100%; */
   display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
+  flex-flow: column wrap;
   background-color: #1a2236;
   font-family: Poppins, serif;
   font-weight: 300;
@@ -144,7 +211,7 @@ p {
 
 .see {
   height: 34px;
-  width: 65vw;
+  min-width: 230px;
   align-self: flex-start;
   font-family: Poppins, serif;
   font-weight: 500;
@@ -177,7 +244,7 @@ p {
 }
 
 .about h2 {
-  font-family: Playfair Display, serif;
+  font-family: "Playfair Display", serif;
   font-weight: 400;
   font-size: 50px;
   padding: 0 0 13px 35px;
@@ -236,22 +303,22 @@ p {
 
 .skill2 {
   background: #e2505c;
-  background-color: hsl(354, 54%, 53%);
+  background-color: hsl(354deg 54% 53%);
 }
 
 .skill3 {
   background: #febf52;
-  background-color: hsl(37, 50%, 33%);
+  background-color: hsl(37deg 50% 33%);
 }
 
 .skills ul {
-  padding: 50px 50px 53px 50px;
+  padding: 50px 50px 53px;
 }
 
 .skills ul li {
   font-family: Poppins, serif;
   font-weight: 600;
-  color: hsl(0, 0%, 41%);
+  color: hsl(0deg 0% 41%);
   color: #fff;
   align-self: center;
   list-style-position: inside;
@@ -262,7 +329,7 @@ p {
   width: 180px;
   list-style: none;
   font-family: Poppins, serif;
-  color: hsl(0, 0%, 41%);
+  color: hsl(0deg 0% 41%);
   font-weight: 800;
   font-size: 20px;
   padding-bottom: 21px;
@@ -270,7 +337,8 @@ p {
 
 /* Footer starts here */
 .footer {
-  background: url(images/image-geometry-1.png) no-repeat;
+  background-image: url(images/image-geometry-1.png);
+  background-repeat: no-repeat;
 }
 
 .form {
@@ -283,7 +351,7 @@ p {
 
 .footer h2 {
   padding: 106px 53px 15px 18px;
-  font-family: Playfair Display, serif;
+  font-family: "Playfair Display", serif;
   font-weight: 400;
   font-size: 50px;
 }
@@ -362,10 +430,6 @@ i {
   color: #fff;
 }
 
-a {
-  height: 10px;
-}
-
 #contact p {
   padding-left: 20px;
   font-family: Poppins, serif;
@@ -378,18 +442,23 @@ a {
 @media (min-width: 992px) {
   /* Navbar starts here */
   .navbar {
+    position: fixed;
+    display: flex;
     width: 100%;
     height: 100px;
     justify-content: center;
-    background: url(images/Rectangle-37.png) no-repeat;
+    background: none;
+    background-color: white;
   }
 
-  #menu-icon {
-    display: none;
-  }
-
-  .navbar ul {
+  .toggleUl {
     display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    transform: none;
+    background: none;
+    height: 100px;
   }
 
   .skills ul li {
@@ -415,7 +484,7 @@ a {
     background-image: url(images/Thur.png), url(images/image-dots-with-teal.png);
     background-size: 50%, 20%;
     background-position: right, 43% 100%;
-    height: 950px;
+    height: 1150px;
     width: auto;
   }
 
@@ -447,11 +516,25 @@ a {
   }
 
   @keyframes fullname {
-    0% { opacity: 0; }
-    25% { opacity: 0.1; }
-    50% { opacity: 0.3; }
-    75% { opacity: 0.5; }
-    100% { opacity: 0.7; }
+    0% {
+      opacity: 0;
+    }
+
+    25% {
+      opacity: 0.1;
+    }
+
+    50% {
+      opacity: 0.3;
+    }
+
+    75% {
+      opacity: 0.5;
+    }
+
+    100% {
+      opacity: 0.7;
+    }
   }
 
   .welcome-section p {
@@ -574,12 +657,12 @@ a {
     display: block;
     padding-left: 3%;
     font-size: 110px;
-    font-family: Playfair Display, serif;
+    font-family: "Playfair Display", serif;
     font-weight: 400;
   }
 
   .about h2 {
-    font-family: Playfair Display, serif;
+    font-family: "Playfair Display", serif;
     font-weight: 400;
     font-size: 110px;
     padding: 0;
@@ -617,5 +700,13 @@ a {
 
   .skills section {
     height: 289px;
+  }
+
+  .nav-icon {
+    display: none;
+  }
+
+  .x-icon {
+    display: none;
   }
 }

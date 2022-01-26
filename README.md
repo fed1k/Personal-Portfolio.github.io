@@ -7,7 +7,7 @@
 ![screenshot](./images/Mobile-version.png)
 ![screenshot](./images/Desktop.png)
 
-It is a show of my understanding of Gitflow, use of Linters, HTML5 semantics, CSS3 flexbox.
+It is a show of my understanding of Gitflow, use of Linters, HTML5 semantics, CSS3 flexbox and Javascript.
 
 ## Built With
 

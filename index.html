@@ -1,175 +1,273 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="app.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"/>
-    <title>Personal Portfolio</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="app.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"
+    />
+    <script src="app.js" defer></script>
+    <title>Firdavs' Portfolio</title>
+  </head>
+  <body>
     <header>
-        
-        <!-- Navigation bar starts here -->
-
-        <nav class="navbar">
-            <img id="menu-icon" src="images/ic-menu.svg" alt="Hamburger">
-            <ul>
-                <li>Hello</li>
-                <li>Portfolio</li>
-                <li>About</li>
-                <li>Contact</li>
-            </ul>
-        </nav>
+      <!-- Navigation bar starts here -->
+      <nav class="navbar">
+        <!-- <div class="x-icon">
+          <span id="id"></span>
+          <span id="id2"></span>
+        </div> -->
+        <div class="nav-icon">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </div>
+        <ul class="toggleUl">
+          <li class="scrolList"><a href="#hello">Hello</a></li>
+          <li class="scrolList"><a href="#portfolio">Portfolio</a></li>
+          <li class="scrolList"><a href="#about">About</a></li>
+          <li class="scrolList"><a href="#contct">Contact</a></li>
+        </ul>
+      </nav>
     </header>
 
-        <!--  Welcome section starts here  -->
+    <!--  Welcome section starts here  -->
 
-    <section class="section">
-       <div class="welcome-section">
+    <section class="section" id="hello">
+      <div class="welcome-section">
         <h1>Firdavs Allamurotov</h1>
-        <p>Hello! I am a software developer! I can help you build a product, feature or website. Taka a look of my works. If you like what you see and have a project you need coded, don’t hesitate and contact me.</p>
+        <p>
+          Hello! I am a software developer! I can help you build a product,
+          feature or website. Taka a look of my works. If you like what you see
+          and have a project you need coded, don’t hesitate and contact me.
+        </p>
         <button class="start" type="button">Start collaboration</button>
-       </div>
+      </div>
     </section>
 
-     <!-- Projects Section start here-->
-     <img id="pro-img" src="images/Group-117.png" alt="Collection of projects">
-     <section class="projects">
+    <!-- Projects Section start here-->
+    <section id="portfolio">
+      <img
+        id="pro-img"
+        src="images/Group-117.png"
+        alt="Collection of projects"
+      />
+      <section class="projects">
         <h2>Projects</h2>
-        <img id="img-dots" src="images/image-dots.png" alt="part of design">
+        <img id="img-dots" src="images/image-dots.png" alt="part of design" />
         <section class="card">
-            <img class="images1" src="images/Rectangle-21.png" alt="Laptop">
-            <h2>Project name goes here</h2>
-            <ul>
-                <li>HTML/CSS</li>
-                <li>Ruby on Rails</li>
-                <li>Javascript</li>
-            </ul>
-            <button class="see" type="button">See this project</button>
+          <img class="images1" src="images/Rectangle-21.png" alt="Laptop" />
+          <h2>Project name goes here</h2>
+          <ul>
+            <li>HTML/CSS</li>
+            <li>Ruby on Rails</li>
+            <li>Javascript</li>
+          </ul>
+          <button class="see" type="button">See this project</button>
         </section>
 
         <section class="card">
-            <img class="images2" src="images/Rectangle-21-1.png" alt="Macbook">
-            <h2>Project name goes here</h2>
-            <ul>
-                <li>HTML/CSS</li>
-                <li>Ruby on Rails</li>
-                <li>Javascript</li>
-            </ul>
-            <button class="see" type="button">See this project</button>
+          <img class="images2" src="images/Rectangle-21-1.png" alt="Macbook" />
+          <h2>Project name goes here</h2>
+          <ul>
+            <li>HTML/CSS</li>
+            <li>Ruby on Rails</li>
+            <li>Javascript</li>
+          </ul>
+          <button class="see" type="button">See this project</button>
         </section>
-    
+
         <section class="card">
-            <img class="images3" src="images/Rectangle-21-2.png" alt="">
-            <h2>Project name goes here</h2>
-            <ul>
-                <li>HTML/CSS</li>
-                <li>Ruby on Rails</li>
-                <li>Javascript</li>
-            </ul>
-            <button class="see" type="button">See this project</button>
+          <img class="images3" src="images/Rectangle-21-2.png" alt="" />
+          <h2>Project name goes here</h2>
+          <ul>
+            <li>HTML/CSS</li>
+            <li>Ruby on Rails</li>
+            <li>Javascript</li>
+          </ul>
+          <button class="see" type="button">See this project</button>
         </section>
-    
+
         <section class="card">
-            <img class="images4" src="images/Rectangle-21-3.png" alt="Responsiveness pattern">
-            <h2>Project name goes here</h2>
-            <ul>
-                <li>HTML/CSS</li>
-                <li>Ruby on Rails</li>
-                <li>Javascript</li>
-            </ul>
-            <button class="see" type="button">See this project</button>
+          <img
+            class="images4"
+            src="images/Rectangle-21-3.png"
+            alt="Responsiveness pattern"
+          />
+          <h2>Project name goes here</h2>
+          <ul>
+            <li>HTML/CSS</li>
+            <li>Ruby on Rails</li>
+            <li>Javascript</li>
+          </ul>
+          <button class="see" type="button">See this project</button>
         </section>
-    
+
         <section class="card">
-            <img class="images5" src="images/Rectangle-21-4.png" alt="Laptop">
-            <h2>Project name goes here</h2>
-            <ul>
-                <li>HTML/CSS</li>
-                <li>Ruby on Rails</li>
-                <li>Javascript</li>
-            </ul>
-            <button class="see" type="button">See this project</button>
+          <img class="images5" src="images/Rectangle-21-4.png" alt="Laptop" />
+          <h2>Project name goes here</h2>
+          <ul>
+            <li>HTML/CSS</li>
+            <li>Ruby on Rails</li>
+            <li>Javascript</li>
+          </ul>
+          <button class="see" type="button">See this project</button>
         </section>
-    
+
         <section class="card">
-            <img class="images6" src="images/Rectangle-21-5.png" alt="Responsiveness pattern">
-            <h2>Project name goes here</h2>
-            <ul>
-                <li>HTML/CSS</li>
-                <li>Ruby on Rails</li>
-                <li>Javascript</li>
-            </ul>
-            <button class="see" type="button">See this project</button>
+          <img
+            class="images6"
+            src="images/Rectangle-21-5.png"
+            alt="Responsiveness pattern"
+          />
+          <h2>Project name goes here</h2>
+          <ul>
+            <li>HTML/CSS</li>
+            <li>Ruby on Rails</li>
+            <li>Javascript</li>
+          </ul>
+          <button class="see" type="button">See this project</button>
         </section>
+      </section>
     </section>
-    <div class="container">
-              <!-- About -->
-        <section class="about">
-            <h2>About</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio temporibus omnis repellat earum ipsa facere, fuga autem est quae obcaecati exercitationem iusto, ex ducimus! Iure eaque laborum optio recusandae temporibus ipsam dolorum debitis, rem, ipsa in sequi quod! Impedit, necessitatibus.</p>
-            <button type="button">Get my CV</button>
+    <div class="container" id="about">
+      <!-- About -->
+      <section class="about">
+        <h2>About</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio
+          temporibus omnis repellat earum ipsa facere, fuga autem est quae
+          obcaecati exercitationem iusto, ex ducimus! Iure eaque laborum optio
+          recusandae temporibus ipsam dolorum debitis, rem, ipsa in sequi quod!
+          Impedit, necessitatibus.
+        </p>
+        <button type="button">Get my CV</button>
+      </section>
+
+      <!-- Skills page start here -->
+      <section class="skills">
+        <section class="skill1">
+          <ul>
+            <li class="leader">Languages</li>
+            <li>Javascript(ES5/ES6)</li>
+            <li>Ruby</li>
+            <li>HTML</li>
+            <li>CSS</li>
+          </ul>
         </section>
-        
-            <!-- Skills page start here -->
-        <section class="skills">
-            <section class="skill1">
-                <ul>
-                    <li class="leader">Languages</li>
-                    <li>Javascript(ES5/ES6)</li>
-                    <li>Ruby</li>
-                    <li>HTML</li>
-                    <li>CSS</li>
-                </ul>
-            </section>
-        
-            <section class="skill2">
-                <ul>
-                    <li class="leader">Frameworks</li>
-                    <li>Bootstrap(ES5/ES6)</li>
-                    <li>Ruby on Rails</li>
-                    <li>RSpec</li>
-                    <li>Capibara</li>
-                    <li>Selenium</li>
-                </ul>
-            </section>
-        
-            <section class="skill3">
-                <ul>
-                    <li class="leader">Skills</li>
-                    <li>Codekit</li>
-                    <li>Codepen</li>
-                    <li>Github</li>
-                    <li>GitLAb</li>
-                    <li>Terminal</li>
-                </ul>
-            </section>
-            <img id="dot" src="images/image-dots-with-teal.png" alt="dots-with-teals">
+
+        <section class="skill2">
+          <ul>
+            <li class="leader">Frameworks</li>
+            <li>Bootstrap(ES5/ES6)</li>
+            <li>Ruby on Rails</li>
+            <li>RSpec</li>
+            <li>Capibara</li>
+            <li>Selenium</li>
+          </ul>
         </section>
+
+        <section class="skill3">
+          <ul>
+            <li class="leader">Skills</li>
+            <li>Codekit</li>
+            <li>Codepen</li>
+            <li>Github</li>
+            <li>GitLAb</li>
+            <li>Terminal</li>
+          </ul>
+        </section>
+        <img
+          id="dot"
+          src="images/image-dots-with-teal.png"
+          alt="dots-with-teals"
+        />
+      </section>
     </div>
-    <footer class="footer">
-        <h2>Get started</h2>
-        <p class="lorem">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna koler dono seganto bolo eeae Lorem ipsum dolor sit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, unde..</p>
-        <form class="form" action="https://formspree.io/f/mayvnrjz" method="post">
-            <input type="text" name="name" id="name" placeholder="Your name" required maxlength="30">
-            <input type="email" name="email" id="email" placeholder="Your email" required>
-            <textarea name="msg" id="comment" cols="30" rows="10" placeholder="Enter your message here..." maxlength="500" required></textarea>
-            <button class="form-button" type="submit">Start collaboration</button>
-        </form>
-        <div id="last-img-container">
-            <img id="last-img" src="images/image-geometry-7.png" alt="geometry-shape">
-        </div>
-        <section id="contact">
-            <p>Get my Resume<i class="fas fa-external-link-alt"></i></p>
-            <a title="stackoverflow-icon" href="https://stackoverflow.com/users/17635012/firdavs" rel="noopener noreferrer"><i class="fab fa-stack-overflow"></i></a>
-            <a title="github-icon" href="https://github.com/fed1k" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
-            <a title="twitter-icon" href="https://twitter.com/?lang=ru" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
-            <a title="linkedin-icon" href="https://www.linkedin.com/in/firdavs-allamurotov-12b60a226/" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
-            <a title="medium-icon" href="https://medium.com/" rel="noopener noreferrer"><i class="fab fa-medium-m"></i></a>
-            <a title="angelilist-icon" href="https://angel.co/" rel="noopener noreferrer"><i class="fab fa-angellist"></i></a>
-        </section>
+    <footer class="footer" id="contct">
+      <h2>Get started</h2>
+      <p class="lorem">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna koler dono seganto bolo eeae
+        Lorem ipsum dolor sit. Lorem ipsum dolor sit amet, consectetur
+        adipisicing elit. Cupiditate, unde..
+      </p>
+      <form class="form" action="https://formspree.io/f/mayvnrjz" method="post">
+        <input
+          type="text"
+          name="name"
+          id="name"
+          placeholder="Your name"
+          required
+          maxlength="30"
+        />
+        <input
+          type="email"
+          name="email"
+          id="email"
+          placeholder="Your email"
+          required
+        />
+        <textarea
+          name="msg"
+          id="comment"
+          cols="30"
+          rows="10"
+          placeholder="Enter your message here..."
+          maxlength="500"
+          required
+        ></textarea>
+        <button class="form-button" type="submit">Start collaboration</button>
+      </form>
+      <div id="last-img-container">
+        <img
+          id="last-img"
+          src="images/image-geometry-7.png"
+          alt="geometry-shape"
+        />
+      </div>
+      <section id="contact">
+        <p>Get my Resume<i class="fas fa-external-link-alt"></i></p>
+        <a
+          title="stackoverflow-icon"
+          href="https://stackoverflow.com/users/17635012/firdavs"
+          rel="noopener noreferrer"
+          ><i class="fab fa-stack-overflow"></i
+        ></a>
+        <a
+          title="github-icon"
+          href="https://github.com/fed1k"
+          rel="noopener noreferrer"
+          ><i class="fab fa-github"></i
+        ></a>
+        <a
+          title="twitter-icon"
+          href="https://twitter.com/?lang=ru"
+          rel="noopener noreferrer"
+          ><i class="fab fa-twitter"></i
+        ></a>
+        <a
+          title="linkedin-icon"
+          href="https://www.linkedin.com/in/firdavs-allamurotov-12b60a226/"
+          rel="noopener noreferrer"
+          ><i class="fab fa-linkedin"></i
+        ></a>
+        <a
+          title="medium-icon"
+          href="https://medium.com/"
+          rel="noopener noreferrer"
+          ><i class="fab fa-medium-m"></i
+        ></a>
+        <a
+          title="angelilist-icon"
+          href="https://angel.co/"
+          rel="noopener noreferrer"
+          ><i class="fab fa-angellist"></i
+        ></a>
+      </section>
     </footer>
-</body>
+  </body>
 </html>
