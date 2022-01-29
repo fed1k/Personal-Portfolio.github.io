@@ -13,3 +13,19 @@ const navSlide = () => {
 };
 
 navSlide();
+
+// Contact form Validation here starts here
+
+// const mailbtn = document.querySelector('#email');
+// const submit = document.querySelector('.form-button');
+// const forma = document.querySelector('.form');
+
+// submit.addEventListener('submit', (e) => {
+//   if (mailbtn.innerHTML !== mailbtn.text.toLowerCase()) {
+//     const contan = document.createElement('span');
+//     contan.innerHTML = 'Write in Lower case';
+//     contan.className = 'mail-checker';
+//     forma.appendChild(contan);
+//     e.preventDefault();
+//   }
+// });

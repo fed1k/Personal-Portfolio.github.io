@@ -86,7 +86,7 @@
   background-image:
     url(images/image-geometry-2.png),
     url(images/image-geometry-1.png);
-  background-size: 320px, 130px;
+  background-size: 253px, 130px;
   background-repeat: no-repeat;
   background-position-y: 90%, 0;
   background-position-x: 50%, 0;
@@ -118,7 +118,7 @@ p {
 .start {
   font-family: Poppins, serif;
   font-weight: 500;
-  width: 300px;
+  min-width: 68vw;
   color: #ffff;
   background-color: #1a2236;
   height: 50px;
@@ -154,7 +154,7 @@ p {
   grid-template-columns: 1fr;
 }
 
-#pro-img {
+.desktop-project-section-image {
   display: none;
 }
 
@@ -170,13 +170,21 @@ p {
   display: none;
 }
 
-.images {
+.images1, .images2, .images3, .images4, .images5, .images6 {
   width: 100%;
   height: 186px;
 }
 
-.card {
-  /* width: 100%; */
+#desktop-shapes {
+  display: none;
+}
+
+.shape-container, .shape-container2, .shape-container3, .shape-container4 {
+  display: none;
+}
+
+.card1, .card2, .card3, .card4, .card5, .card6 {
+  width: 100%;
   display: flex;
   flex-flow: column wrap;
   background-color: #1a2236;
@@ -187,20 +195,20 @@ p {
   height: 336px;
 }
 
-.card h2 {
+.card1 h2, .card2 h2, .card3 h2, .card4 h2, .card5 h2, .card6 h2 {
   font-family: Poppins, serif;
   font-weight: 300;
   font-size: 20px;
   padding-top: 15px;
 }
 
-.card ul {
+.card1 ul, .card2 ul, .card3 ul, .card4 ul, .card5 ul, .card6 ul{
   display: flex;
   gap: 8px;
   padding-left: 15px;
 }
 
-.card ul li {
+.card1 ul li, .card2 ul li, .card3 ul li, .card4 ul li, .card5 ul li, .card6 ul li{
   text-align: center;
   font-size: 10px;
   list-style: none;
@@ -232,6 +240,10 @@ p {
 .see:active {
   border: 2px solid #1a2236;
   cursor: pointer;
+}
+
+.shape-container {
+  display: none;
 }
 
 /* About Section */
@@ -273,7 +285,7 @@ p {
   color: #ffff;
   background-color: #1a2236;
   height: 50px;
-  width: 90vw;
+  min-width: 45vw;
 }
 
 /* Button hovers */
@@ -290,7 +302,7 @@ p {
 .skills {
   height: 900px;
   display: grid;
-  grid-template-columns: 280px;
+  grid-template-columns: 260px;
   justify-content: center;
   align-items: flex-end;
   padding-top: 40px;
@@ -449,6 +461,7 @@ i {
     justify-content: center;
     background: none;
     background-color: white;
+    z-index: 2;
   }
 
   .toggleUl {
@@ -489,9 +502,10 @@ i {
   }
 
   .start {
-    width: 254px;
+    min-width: 20vw;
     height: 70px;
     transition: all 0.6s ease-in-out;
+    margin-top: 30px;
   }
 
   .start:hover {
@@ -539,24 +553,241 @@ i {
 
   .welcome-section p {
     width: 484px;
-    padding-bottom: 30px;
+    padding: 0;
   }
 
   /* Projects start here */
   .projects {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding-top: 25%;
+  }
+
+  .div-container h2 {
+    transform: translateX(-100px) rotate(-90deg);
+    margin-top: 110px;
+    font-size: 120px;
+    padding-left: 0;
+  }
+
+  .card1 {
+    background: none;
+    display: flex;
+    flex-flow: row wrap;
+    grid-column: 2/5;
+    color: #1a2236;
+  }
+
+  .images1 {
+    width: 100%;
+  }
+
+  .color {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    bottom: 60%;
+    width: 100%;
+    height: 50%;
+    opacity: 0.95;
+    background-color: #1a2236;
+    height: 60%;
+    padding-left: 30px;
+  }
+
+  .color h2 {
+    position: relative;
+    color: #fff;
+    font-size: 70px;
+    font-weight: 700;
+    top: 5%;
+  }
+
+  .card6 {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .color2 {
+    position: relative;
+    right: 100%;
+    top: 20%;
+    background-color: #1a2236;
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .color2 ul li {
+    font-size: 15px;
+    width: 8vw;
+  }
+
+  .color2 ul {
+    position: relative;
+    top: 10%;
+  }
+
+  .color2 h2 {
+    font-size: 40px;
+    font-weight: 700;
+    position: relative;
+    top: 7%;
+  }
+
+  .color2 button {
+    margin-top: 0;
+    position: relative;
+    top: 15%;
+    font-weight: 700;
+  }
+
+  .color ul {
+    position: relative;
+    top: 10%;
+    gap: 20px;
+  }
+
+  .color ul li {
+    font-size: 20px;
+  }
+
+  .see {
+    position: relative;
+    top: 15%;
+    height: 50px;
+    background-color: #fff;
+    color: #1a2236;
+    font-weight: 700;
+  }
+
+  .card2 ul, .card2 button {
     display: none;
   }
+
+  .images2 {
+    width: 100%;
+    height: 30%;
+  }
+
+  .card3 {
+    grid-column: 1/3;
+    grid-row: 3/4;
+  }
+
+  .card4 {
+    grid-row: 4/5;
+    grid-column: 2/3;
+  }
+
+  .color ul {
+    display: flex;
+    position: relative;
+    bottom: 30%;
+    width: 100%;
+  }
+
+  .shape-container {
+    display: inline;
+    grid-column: 2/4;
+    /* float: right; */
+  }
+
+  .shape-container3 {
+    display: inline;
+    grid-row: 3/4;
+    display: flex;
+  }
+
+  .shape-container4 {
+    display: inline;
+    grid-column: 1/2;
+    grid-row: 4/5;
+  }
+
+  .shape-container5 {
+    grid-column: 2/3;
+    grid-row: 4/5;
+  }
+
+  .shape-container5 img {
+    float: right;
+  }
+
+  .div-container {
+    background-image: url(images/image-dots.png);
+    background-repeat: no-repeat;
+    background-position: top right; 
+  }
+
+  .desktop-project-section-image {
+    width: 80%;
+    height: 100%;
+    display: inline;
+  }
+
+  .images4 {
+    width: 100%;
+  }
+
+  .card3 h2, .card3 ul, .card3 button {
+    display: none;
+  }
+
+  .card4 h2, .card4 ul, .card4 button {
+    display: none;
+  }
+
+  .card4 {
+    grid-column: 3/4;
+  }
+
+  .card5 h2, .card5 ul, .card5 button {
+    display: none;
+  }
+
+  .card1 h2 {
+    display: block;
+  }
+
+  .card5 {
+    grid-row: 3/4;
+    grid-column: 4/5;
+    width: 100%;
+    background-image: url(images/Group83.png);
+    background-repeat: no-repeat;
+    background-position-y: 78%;
+    background-position-x: right;
+    background-size: 20vw;
+
+  }
+
+  .card6 {
+    grid-column: 4/5;
+  }
+
+  .round-shape {
+    font-size: 20px;
+    align-self: flex-end;
+  }
+
+  .images5 {
+    width: 100%;
+    height: 50%;
+  }
+
+  #desktop-shapes {
+    display: inline;
+  }
+
+
 
   .skills {
     display: grid;
     grid-template-columns: 50% 50%;
     grid-template-rows: 289px 289px;
-  }
-
-  #pro-img {
-    width: 100%;
-    display: block;
-    margin-top: 450px;
+    margin-left: 10px;
   }
 
   #contact {
@@ -567,7 +798,7 @@ i {
   }
 
   .about p {
-    width: 446px;
+    width: 25vw;
     height: auto;
     margin: 0;
     padding: 10px 0;
@@ -682,6 +913,7 @@ i {
     font-weight: 500;
     font-size: 18px;
     transition: all 0.6s ease-in-out;
+    min-width: 20vw;
   }
 
   .about button:hover {
@@ -708,5 +940,20 @@ i {
 
   .x-icon {
     display: none;
+  }
+
+  .card1, .card2, .card3, .card4, .card5, .card6 {
+    background-color: white;
+    /* display: inline; */
+    height: auto;
+  }
+
+  .images1, .images2, .images3, .images4, .images6 {
+    height: 100%;
+  }
+
+  .mail-checker {
+    color: #e2505c;
+    display: inline;
   }
 }
