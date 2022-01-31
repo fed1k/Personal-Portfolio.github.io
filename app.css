@@ -31,6 +31,10 @@
   list-style: none;
 }
 
+.navbar ul {
+  display: none;
+}
+
 .items1 {
   transform: rotate(-50deg);
   transition: all 0.3s ease-in-out;
@@ -527,7 +531,7 @@ i {
   }
 
   .welcome-section h1 {
-    font-size: 110px;
+    font-size: 90px;
     padding-bottom: 20px;
     width: auto;
     margin: 0;
@@ -778,6 +782,10 @@ i {
   }
 
   .menu-icon {
+    display: none;
+  }
+
+  .toggleUl {
     display: none;
   }
 
