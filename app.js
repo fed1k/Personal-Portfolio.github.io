@@ -1,1 +1,1 @@
-const numpad = document.querySelector('.name');
+const numpad = document.querySelector('name');
