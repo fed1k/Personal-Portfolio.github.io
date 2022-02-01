@@ -35,6 +35,10 @@
   display: none;
 }
 
+.menu-list {
+  list-style-type: none;
+}
+
 .items1 {
   transform: rotate(-50deg);
   transition: all 0.3s ease-in-out;
@@ -969,3 +973,5 @@ i {
     height: 100%;
   }
 }
+
+
