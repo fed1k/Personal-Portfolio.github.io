@@ -492,6 +492,15 @@ i {
     font-weight: 400;
   }
 
+  .color2 ul li {
+    font-size: 15px;
+    width: 8vw;
+  }
+
+  .color ul li {
+    font-size: 20px;
+  }
+
   .navbar ul li:hover {
     cursor: pointer;
     text-decoration: underline;
@@ -630,11 +639,6 @@ i {
     flex-direction: column;
   }
 
-  .color2 ul li {
-    font-size: 15px;
-    width: 8vw;
-  }
-
   .color2 ul {
     position: relative;
     top: 10%;
@@ -658,10 +662,10 @@ i {
     position: relative;
     top: 10%;
     gap: 20px;
-  }
-
-  .color ul li {
-    font-size: 20px;
+    display: flex;
+    position: relative;
+    bottom: 30%;
+    width: 100%;
   }
 
   .see {
@@ -690,14 +694,7 @@ i {
 
   .card4 {
     grid-row: 4/5;
-    grid-column: 2/3;
-  }
-
-  .color ul {
-    display: flex;
-    position: relative;
-    bottom: 30%;
-    width: 100%;
+    grid-column: 3/4;
   }
 
   .shape-container {
@@ -719,6 +716,7 @@ i {
   .shape-container5 {
     grid-column: 2/3;
     grid-row: 4/5;
+    display: block;
   }
 
   .shape-container5 img {
@@ -753,10 +751,6 @@ i {
     display: none;
   }
 
-  .card4 {
-    grid-column: 3/4;
-  }
-
   .card5 h2,
   .card5 ul,
   .card5 button {
@@ -776,10 +770,6 @@ i {
     background-position-y: 78%;
     background-position-x: right;
     background-size: 20vw;
-  }
-
-  .card6 {
-    grid-column: 4/5;
   }
 
   .menu-icon {
