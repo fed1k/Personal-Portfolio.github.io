@@ -55,7 +55,6 @@
   font-family: Poppins, serif;
 }
 
-
 .menu-icon {
   height: 10px;
   width: 100%;
@@ -597,7 +596,6 @@ i {
     position: relative;
     bottom: 60%;
     width: 100%;
-    height: 50%;
     opacity: 0.95;
     background-color: #1a2236;
     height: 60%;
@@ -704,7 +702,6 @@ i {
   }
 
   .shape-container3 {
-    display: inline;
     grid-row: 3/4;
     display: flex;
   }
@@ -961,8 +958,6 @@ i {
   .card5,
   .card6 {
     background-color: white;
-
-    /* display: inline; */
     height: auto;
   }
 
@@ -972,10 +967,5 @@ i {
   .images4,
   .images6 {
     height: 100%;
-  }
-
-  .mail-checker {
-    color: #e2505c;
-    display: inline;
   }
 }
