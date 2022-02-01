@@ -61,7 +61,7 @@
   width: 100%;
   position: fixed;
   transform: translate(80vw, 5vw);
-  z-index: 999;
+  z-index: 3;
 }
 
 .menu-icon div {

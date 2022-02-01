@@ -1,5 +1,4 @@
 const menuicon = document.querySelector('.menu-icon');
-const { screen } = document;
 const item1 = document.querySelector('.item1');
 const item2 = document.querySelector('.item2');
 const item3 = document.querySelector('.item3');
@@ -16,12 +15,10 @@ menuicon.addEventListener('click', () => {
 
 function myToggle() {
   ul.classList.remove('toggleUl');
-  if (screen.width < 993) {
-    ul.style.display = 'none';
-  }
   item1.classList.remove('items1');
   item2.classList.remove('items2');
   item3.classList.remove('items3');
+  ul.style.display = 'none';
 }
 
 li.forEach((i) => {
