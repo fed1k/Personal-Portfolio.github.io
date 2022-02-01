@@ -663,7 +663,6 @@ i {
     top: 10%;
     gap: 20px;
     display: flex;
-    position: relative;
     bottom: 30%;
     width: 100%;
   }
