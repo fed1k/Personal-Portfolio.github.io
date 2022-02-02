@@ -27,42 +27,42 @@ li.forEach((i) => {
 });
 // Popup window details section starts here
 // const popup = [
-//   card1 = {
+//   card1 : {
 //     name: 'First Project',
 //     description: 'Lorem ipsum dolor sit amet, consectetur ',
 //     technologies: ['HTML/CSS', 'Ruby on Rails', 'Javascript'],
 //     live: 'https://fed1k.github.io/Personal-Portfolio.github.io/',
 //     source: 'https://github.com/fed1k/Personal-Portfolio.github.io',
 //   },
-//   card2 = {
+//   card2 : {
 //     name: 'Second Project',
 //     description: 'Lorem ipsum dolor sit amet, consectetur isi',
 //     technologies: ['HTML/CSS', 'Ruby on Rails', 'Javascript'],
 //     live: 'https://fed1k.github.io/Personal-Portfolio.github.io/',
 //     source: 'https://github.com/fed1k/Personal-Portfolio.github.io',
 //   },
-//   card3 = {
+//   card3 : {
 //     name: 'Third Project',
 //     description: 'Lorem ipsum dolor sit amnt ut labore et dolorenisi',
 //     technologies: ['HTML/CSS', 'Ruby on Rails', 'Javascript'],
 //     live: 'https://fed1k.github.io/Personal-Portfolio.github.io/',
 //     source: 'https://github.com/fed1k/Personal-Portfolio.github.io',
 //   },
-//   card4 = {
+//   card4 : {
 //     name: 'Fourth Project',
 //     description: 'Lorem ipsum dolor siabtion ullamco laboris nisi',
 //     technologies: ['HTML/CSS', 'Ruby on Rails', 'Javascript'],
 //     live: 'https://fed1k.github.io/Personal-Portfolio.github.io/',
 //     source: 'https://github.com/fed1k/Personal-Portfolio.github.io',
 //   },
-//   card5 = {
+//   card5 : {
 //     name: 'Fifth Project',
 //     description: 'Lorem ipsum dolor sit ametabore et dolore magna aliqua. Ut enim ad',
 //     technologies: ['HTML/CSS', 'Ruby on Rails', 'Javascript'],
 //     live: 'https://fed1k.github.io/Personal-Portfolio.github.io/',
 //     source: 'https://github.com/fed1k/Personal-Portfolio.github.io',
 //   },
-//   card6 = {
+//   card6 : {
 //     name: 'Sixth Project',
 //     description: 'Lorem ipsum dolor sit amet, conseabore et dolorei',
 //     technologies: ['HTML/CSS', 'Ruby on Rails', 'Javascript'],
@@ -71,13 +71,12 @@ li.forEach((i) => {
 //   },
 // ];
 
-// const seebtn = document.querySelectorAll('.see');
-// seebtn.forEach((own) => {
-//   own.addEventListener('click', () => {
-//     const conteyner = document.createElement('section');
-//     const body = document.querySelector('body');
-//     conteyner.className = 'mobile';
-//     body.appendChild(conteyner);
-//     conteyner.insertBefore(ul);
-//   });
-// });
+const seebtn = document.querySelectorAll('.see');
+seebtn.forEach((own) => {
+  own.addEventListener('click', () => {
+    const conteyner = document.createElement('section');
+    const projects = document.querySelector('.projects');
+    conteyner.className = 'mobile';
+    projects.appendChild(conteyner);
+  });
+});

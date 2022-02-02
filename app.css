@@ -22,7 +22,8 @@
   position: fixed;
   height: 100vh;
   width: 100vw;
-  background-color: red;
+  background-color: #fff;
+  top: 0;
 }
 
 .toggleUl {
@@ -526,6 +527,9 @@ i {
     height: 75px;
     transform: scale(1.1);
     border-radius: 20px;
+    background-color: #fff;
+    color: #1a2236;
+    cursor: pointer;
   }
 
   .welcome-section {
@@ -666,6 +670,11 @@ i {
     background-color: #fff;
     color: #1a2236;
     font-weight: 700;
+  }
+
+  .see:hover {
+    background-color: #fff;
+    color: #1a2236;
   }
 
   .card2 ul,
