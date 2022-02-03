@@ -70,13 +70,3 @@ li.forEach((i) => {
 //     source: 'https://github.com/fed1k/Personal-Portfolio.github.io',
 //   },
 // ];
-
-const seebtn = document.querySelectorAll('.see');
-seebtn.forEach((own) => {
-  own.addEventListener('click', () => {
-    const conteyner = document.createElement('section');
-    const projects = document.querySelector('.projects');
-    conteyner.className = 'mobile';
-    projects.appendChild(conteyner);
-  });
-});

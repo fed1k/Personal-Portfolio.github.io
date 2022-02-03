@@ -675,6 +675,7 @@ i {
   .see:hover {
     background-color: #fff;
     color: #1a2236;
+    cursor: pointer;
   }
 
   .card2 ul,
