@@ -5,6 +5,9 @@ const item3 = document.querySelector('.item3');
 const ul = document.querySelector('.navbar ul');
 const li = document.querySelectorAll('.scrolList');
 const navbar = document.querySelector('.navbar');
+const form = document.querySelector('.form');
+const email = document.querySelector('#email');
+const error = document.querySelector('.error-message');
 
 menuicon.addEventListener('click', () => {
   navbar.classList.toggle('navigation');
@@ -25,6 +28,18 @@ function myToggle() {
 li.forEach((i) => {
   i.addEventListener('click', myToggle);
 });
+
+form.addEventListener('submit', (e) => {
+  const Emailtext = email.value;
+  if (Emailtext !== Emailtext.toLowerCase()) {
+    e.preventDefault();
+    error.style.color = 'red';
+    error.textContent = 'Please Enter your Email in Lowercase';
+  } else {
+    error.textContent = '';
+  }
+});
+
 // Popup window details section starts here
 // const popup = [
 //   card1 = {
