@@ -34,6 +34,7 @@ form.addEventListener('submit', (e) => {
   if (Emailtext !== Emailtext.toLowerCase()) {
     e.preventDefault();
     error.style.color = 'red';
+    error.style.gridColumn = '2/3';
     error.textContent = 'Please Enter your Email in Lowercase';
   } else {
     error.textContent = '';
