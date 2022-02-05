@@ -526,6 +526,9 @@ i {
     height: 75px;
     transform: scale(1.1);
     border-radius: 20px;
+    background-color: #fff;
+    color: #1a2236;
+    cursor: pointer;
   }
 
   .welcome-section {
