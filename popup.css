@@ -15,11 +15,17 @@
  display: flex;
  margin-top: 20px;
  align-self: start;
+ margin-left: 4%;
 }
 
 .list { 
     background-color: white !important;
     border: 1px solid black;
+    margin: 0 10px 0 10px;
+    width: auto;
+    font-size: 20px;
+    font-family: Poppins, serif;
+    font-weight: 300;
 }
 
 .projectImage {
@@ -80,4 +86,33 @@ color: #1A2236;
 
 .hidden {
     display: none;
+}
+
+@media (min-width: 992px) {
+    .parentButtonDiv {
+        flex-direction: row;
+    }
+
+    .projectButton {
+        font-family: Poppins, serif;
+        font-weight: 500;
+        font-size: 18px;
+    }
+
+    .projectButton:hover {
+        background-color: #1A2236;
+        cursor: pointer;
+        color: #fff;
+    }
+
+    .heading {
+        font-weight: 800;
+        font-size: 60px;
+    }
+
+    .divider {
+        background-color: #1A2236;
+    }
+
+    
 }

@@ -588,7 +588,7 @@ i {
     padding-left: 0;
   }
 
-  .card1 {
+  .card1, .card2, .card3, .card4, .card5, .card6 {
     background: none;
     display: flex;
     flex-flow: row wrap;
