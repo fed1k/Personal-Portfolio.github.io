@@ -599,6 +599,8 @@ i {
     flex-flow: row wrap;
     grid-column: 2/5;
     color: #1a2236;
+    background-color: white;
+    height: auto;
   }
 
   .images1 {
@@ -946,15 +948,7 @@ i {
     height: 289px;
   }
 
-  .card1,
-  .card2,
-  .card3,
-  .card4,
-  .card5,
-  .card6 {
-    background-color: white;
-    height: auto;
-  }
+ 
 
   .images1,
   .images2,
