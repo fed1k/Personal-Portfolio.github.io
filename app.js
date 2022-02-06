@@ -169,3 +169,8 @@ function popupModel() {
 function showPopup() {
   popupModel();
 }
+
+const number = 5;
+if (number > 10) {
+  showPopup();
+}
