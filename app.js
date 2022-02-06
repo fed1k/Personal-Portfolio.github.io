@@ -28,18 +28,6 @@ li.forEach((i) => {
   i.addEventListener('click', myToggle);
 });
 
-form.addEventListener('submit', (e) => {
-  const Emailtext = email.value;
-  if (Emailtext !== Emailtext.toLowerCase()) {
-    e.preventDefault();
-    error.style.color = 'red';
-    error.style.gridColumn = '2/3';
-    error.textContent = 'Please your email should be in lower case';
-  } else {
-    error.textContent = '';
-  }
-});
-
 // Popup window details section starts here
 const popup = [
   {
