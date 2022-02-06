@@ -5,13 +5,10 @@ const item3 = document.querySelector('.item3');
 const ul = document.querySelector('.navbar ul');
 const li = document.querySelectorAll('.scrolList');
 const navbar = document.querySelector('.navbar');
-<<<<<<< HEAD
 const mainDiv = document.createElement("div");
-=======
 const form = document.querySelector('.form');
 const email = document.querySelector('#email');
 const error = document.querySelector('.error-message');
->>>>>>> 0936734cb86507abe0cb046bde611ec86294f221
 
 menuicon.addEventListener('click', () => {
   navbar.classList.toggle('navigation');
@@ -58,7 +55,7 @@ const popup = [
 
 
 
-function createProject(image) {
+function createProject(image,className) {
   const project = `
       <section class="card1">
           <img class="images1" src="${image}" alt="Laptop" />
@@ -69,7 +66,7 @@ function createProject(image) {
               <li>Ruby on Rails</li>
               <li>Javascript</li>
             </ul>
-            <button class="see" onclick="showPopup()" type="button">See this project</button>
+            <button class="see" onclick="popupModel('.${className}')" type="button">See this project</button>
           </div>
       </section>
   `;
@@ -87,14 +84,13 @@ const projectImages = [
   "images/Rectangle-21-5.png",
 ];
 
-
+const arrClassName = ['card1', 'card2', 'card3', 'card4', 'card5', 'card6'];
 
 for (let i = 0; i < 6; i += 1) {
-  projects.innerHTML += createProject(projectImages[i]);
+  projects.innerHTML += createProject(projectImages[i], arrClassName[i]);
 }
 
-
-function heading() {
+function popupModel(name) {
   const h2 = document.createElement("h2");
   const div = document.createElement('div');
   div.className = "heading-div"
@@ -102,24 +98,12 @@ function heading() {
   h2.innerHTML = "project name goes here"
   const icon = document.createElement('i');
   icon.className = "fa fa-times times"
-  
   div.append(h2, icon)
 
-  
-  icon.addEventListener('click', () => {
+   icon.addEventListener('click', () => {
     mainDiv.classList.toggle('hidden')
-  })
-
-  return div;
-}
-
-
-
-
-
- 
-
-function languages() {
+   })
+  
   const ul = document.createElement('ul');
   ul.className = "languagesContainer";
 
@@ -130,72 +114,41 @@ function languages() {
     li.innerHTML = languages[i];
     ul.appendChild(li);
   }
-
-  return ul;
-}
-
-function image() {
+  
   const image = document.createElement('img');
   image.className = "projectImage";
   image.src = "images/Rectangle-21-5.png";
 
-  return image;
-}
-
-function description() {
   const description = document.createElement('p');
   description.className = "projectDescription";
   description.innerHTML = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi Ut aliquip ex ea commodo consequat.  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.';
 
-  return description;
-}
+   const arrName = ["See live", "Live Source"];
+   const arrIcon = [
+     "fas fa-external-link-alt btnIcon",
+     "fab fa-github btnIcon",
+   ];
 
+   const buttonDiv = document.createElement("div");
+   buttonDiv.className = "parentButtonDiv";
 
+   for (let i = 0; i < 2; i += 1) {
+     const icon = document.createElement("i");
+     const button = document.createElement("button");
 
-function button() {
-  const arrName = ["See live", "Live Source"];
-  const arrIcon = ["fas fa-external-link-alt btnIcon", "fab fa-github btnIcon"];
-  
-
-  const buttonDiv = document.createElement("div");
-  buttonDiv.className = "parentButtonDiv"
-
- 
-  for (let i = 0; i < 2; i += 1) {
-    const icon = document.createElement("i");
-    const button = document.createElement("button");
-    
-    button.className = "projectButton";
-    icon.className = arrIcon[i];
-    button.append(arrName[i], icon);
-    buttonDiv.appendChild(button);
-  }
-
-  return buttonDiv;
-}
-
-
-function popupModel() {
-  heading();
-  languages();
-  image();
-  description();
-  button();
-
-
-
-
+     button.className = "projectButton";
+     icon.className = arrIcon[i];
+     button.append(arrName[i], icon);
+     buttonDiv.appendChild(button);
+   }
   
   mainDiv.className = "main-popup-div"
-  mainDiv.append(heading(), languages(), image(), description(), button());
+  mainDiv.append(h2, icon, ul, languages, image, description, buttonDiv);
 
-  const card = document.querySelector('.card1');
+  const card = document.querySelector(name);
+
 
   card.appendChild(mainDiv)
-
 }
 
 
-function showPopup() {
-  popupModel();
-}
