@@ -5,7 +5,7 @@ const item3 = document.querySelector('.item3');
 const ul = document.querySelector('.navbar ul');
 const li = document.querySelectorAll('.scrolList');
 const navbar = document.querySelector('.navbar');
-const mainDiv = document.createElement("div");
+const mainDiv = document.createElement('div');
 const form = document.querySelector('.form');
 const email = document.querySelector('#email');
 const error = document.querySelector('.error-message');
@@ -53,9 +53,7 @@ const popup = [
   },
 ];
 
-
-
-function createProject(image,className) {
+function createProject(image, className) {
   const project = `
       <section class="card1">
           <img class="images1" src="${image}" alt="Laptop" />
@@ -72,16 +70,16 @@ function createProject(image,className) {
   `;
 
   return project;
-};
+}
 
 const projects = document.querySelector('.projects');
 const projectImages = [
-  "images/Rectangle-21.png",
-  "images/Rectangle-21-1.png",
-  "images/Rectangle-21-2.png",
-  "images/Rectangle-21-3.png",
-  "images/Rectangle-21-4.png",
-  "images/Rectangle-21-5.png",
+  'images/Rectangle-21.png',
+  'images/Rectangle-21-1.png',
+  'images/Rectangle-21-2.png',
+  'images/Rectangle-21-3.png',
+  'images/Rectangle-21-4.png',
+  'images/Rectangle-21-5.png',
 ];
 
 const arrClassName = ['card1', 'card2', 'card3', 'card4', 'card5', 'card6'];
@@ -91,64 +89,61 @@ for (let i = 0; i < 6; i += 1) {
 }
 
 function popupModel(name) {
-  const h2 = document.createElement("h2");
+  const h2 = document.createElement('h2');
   const div = document.createElement('div');
-  div.className = "heading-div"
-  h2.className = "heading";
-  h2.innerHTML = "project name goes here"
+  div.className = 'heading-div';
+  h2.className = 'heading';
+  h2.innerHTML = 'project name goes here';
   const icon = document.createElement('i');
-  icon.className = "fa fa-times times"
-  div.append(h2, icon)
+  icon.className = 'fa fa-times times';
+  div.append(h2, icon);
 
-   icon.addEventListener('click', () => {
-    mainDiv.classList.toggle('hidden')
-   })
-  
+  icon.addEventListener('click', () => {
+    mainDiv.classList.toggle('hidden');
+  });
+
   const ul = document.createElement('ul');
-  ul.className = "languagesContainer";
+  ul.className = 'languagesContainer';
 
   const languages = popup[0].technologies;
   for (let i = 0; i < languages.length; i += 1) {
     const li = document.createElement('li');
-    li.className = "list"
+    li.className = 'list';
     li.innerHTML = languages[i];
     ul.appendChild(li);
   }
-  
+
   const image = document.createElement('img');
-  image.className = "projectImage";
-  image.src = "images/Rectangle-21-5.png";
+  image.className = 'projectImage';
+  image.src = 'images/Rectangle-21-5.png';
 
   const description = document.createElement('p');
-  description.className = "projectDescription";
+  description.className = 'projectDescription';
   description.innerHTML = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi Ut aliquip ex ea commodo consequat.  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.';
 
-   const arrName = ["See live", "Live Source"];
-   const arrIcon = [
-     "fas fa-external-link-alt btnIcon",
-     "fab fa-github btnIcon",
-   ];
+  const arrName = ['See live', 'Live Source'];
+  const arrIcon = [
+    'fas fa-external-link-alt btnIcon',
+    'fab fa-github btnIcon',
+  ];
 
-   const buttonDiv = document.createElement("div");
-   buttonDiv.className = "parentButtonDiv";
+  const buttonDiv = document.createElement('div');
+  buttonDiv.className = 'parentButtonDiv';
 
-   for (let i = 0; i < 2; i += 1) {
-     const icon = document.createElement("i");
-     const button = document.createElement("button");
+  for (let i = 0; i < 2; i += 1) {
+    const icon = document.createElement('i');
+    const button = document.createElement('button');
 
-     button.className = "projectButton";
-     icon.className = arrIcon[i];
-     button.append(arrName[i], icon);
-     buttonDiv.appendChild(button);
-   }
-  
-  mainDiv.className = "main-popup-div"
+    button.className = 'projectButton';
+    icon.className = arrIcon[i];
+    button.append(arrName[i], icon);
+    buttonDiv.appendChild(button);
+  }
+
+  mainDiv.className = 'main-popup-div';
   mainDiv.append(h2, icon, ul, languages, image, description, buttonDiv);
 
   const card = document.querySelector(name);
 
-
-  card.appendChild(mainDiv)
+  card.appendChild(mainDiv);
 }
-
-
