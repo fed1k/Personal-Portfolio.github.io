@@ -1,0 +1,117 @@
+.main-popup-div {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  background-color: white;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  overflow: scroll;
+  flex-direction: column;
+  align-items: center;
+}
+
+.languagesContainer {
+  display: flex;
+  margin-top: 20px;
+  align-self: start;
+  margin-left: 4%;
+}
+
+.list {
+  background-color: white !important;
+  border: 1px solid black;
+  margin: 0 10px;
+  width: auto;
+  font-size: 20px;
+  font-family: Poppins, serif;
+  font-weight: 300;
+}
+
+.projectImage {
+  border: 1px solid red;
+  margin: 30px;
+  width: 90%;
+}
+
+.heading {
+  font-family: Poppins, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 80%;
+  color: #1a2236;
+  align-self: start;
+}
+
+.projectDescription {
+  font-family: Poppins, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 27px;
+  color: #1a2236;
+}
+
+.projectButton {
+  border: 1px solid black;
+  padding: 15px;
+  width: 300px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.parentButtonDiv {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 50px;
+}
+
+.heading-div {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+
+.times {
+  color: black;
+  margin-right: -300px;
+  margin-top: -10px;
+}
+
+.btnIcon {
+  color: black;
+}
+
+.hidden {
+  display: none;
+}
+
+@media (min-width: 992px) {
+  .parentButtonDiv {
+    flex-direction: row;
+  }
+
+  .projectButton {
+    font-family: Poppins, serif;
+    font-weight: 500;
+    font-size: 18px;
+  }
+
+  .projectButton:hover {
+    background-color: #1a2236;
+    cursor: pointer;
+    color: #fff;
+  }
+
+  .heading {
+    font-weight: 800;
+    font-size: 60px;
+  }
+
+  .divider {
+    background-color: #1a2236;
+  }
+}

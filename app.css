@@ -473,6 +473,11 @@ i {
     z-index: 2;
   }
 
+  .main-popup-div {
+    left: 0;
+    min-height: 90vh;
+  }
+
   .skills ul li {
     font-size: 15px;
   }
@@ -583,12 +588,19 @@ i {
     padding-left: 0;
   }
 
-  .card1 {
+  .card1,
+  .card2,
+  .card3,
+  .card4,
+  .card5,
+  .card6 {
     background: none;
     display: flex;
     flex-flow: row wrap;
     grid-column: 2/5;
     color: #1a2236;
+    background-color: white;
+    height: auto;
   }
 
   .images1 {
@@ -936,16 +948,6 @@ i {
     height: 289px;
   }
 
-  .card1,
-  .card2,
-  .card3,
-  .card4,
-  .card5,
-  .card6 {
-    background-color: white;
-    height: auto;
-  }
-
   .images1,
   .images2,
   .images3,
@@ -953,4 +955,6 @@ i {
   .images6 {
     height: 100%;
   }
+
+  /* It ends here */
 }
