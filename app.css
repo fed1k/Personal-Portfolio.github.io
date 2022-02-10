@@ -320,16 +320,25 @@ p {
 
 .skill1 {
   background: #1c528a;
+  background-image: url(images/1.png);
+  background-repeat: no-repeat;
+  background-position: bottom right;
 }
 
 .skill2 {
   background: #e2505c;
   background-color: hsl(354deg 54% 53%);
+  background-image: url(images/framework.png);
+  background-repeat: no-repeat;
+  background-position: bottom right;
 }
 
 .skill3 {
   background: #febf52;
   background-color: hsl(37deg 50% 33%);
+  background-image: url(images/icskills.png);
+  background-repeat: no-repeat;
+  background-position: bottom right;
 }
 
 .skills ul {
