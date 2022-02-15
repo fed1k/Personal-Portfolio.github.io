@@ -376,7 +376,7 @@ p {
   display: flex;
   flex-direction: column;
   background-color: #f9f9fa;
-  gap: 8px;
+  gap: 20px;
 }
 
 .footer h2 {
@@ -447,7 +447,7 @@ p {
 
 #contact {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   width: 100%;
   background-color: #1a2236;
@@ -456,7 +456,6 @@ p {
 }
 
 i {
-  padding-left: 10px;
   color: #fff;
 }
 
@@ -466,6 +465,15 @@ i {
   font-weight: 500;
   font-size: 16px;
   padding-bottom: 20px;
+}
+
+.social-icons-cont {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.resume {
+  padding-left: 10px;
 }
 
 /* Desktop version starts here */
@@ -819,6 +827,7 @@ i {
   #contact {
     width: 100%;
     display: flex;
+    flex-direction: row;
     justify-content: space-around;
     padding-right: 130px;
   }
@@ -968,5 +977,13 @@ i {
     height: 100%;
   }
 
+<<<<<<< HEAD
   /* It ends here */
+=======
+  .social-icons-cont {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+  }
+>>>>>>> 4c148b16e2cf21ee1a05777f6f011f44d6ca1b9d
 }
