@@ -490,11 +490,6 @@ i {
     z-index: 2;
   }
 
-  .main-popup-div {
-    left: 0;
-    min-height: 90vh;
-  }
-
   .skills ul li {
     font-size: 15px;
   }
@@ -608,19 +603,12 @@ i {
     padding-left: 0;
   }
 
-  .card1,
-  .card2,
-  .card3,
-  .card4,
-  .card5,
-  .card6 {
+  .card1 {
     background: none;
     display: flex;
     flex-flow: row wrap;
     grid-column: 2/5;
     color: #1a2236;
-    background-color: white;
-    height: auto;
   }
 
   .images1 {
@@ -969,6 +957,16 @@ i {
     height: 289px;
   }
 
+  .card1,
+  .card2,
+  .card3,
+  .card4,
+  .card5,
+  .card6 {
+    background-color: white;
+    height: auto;
+  }
+
   .images1,
   .images2,
   .images3,
@@ -977,13 +975,9 @@ i {
     height: 100%;
   }
 
-<<<<<<< HEAD
-  /* It ends here */
-=======
   .social-icons-cont {
     display: flex;
     justify-content: flex-end;
     align-items: flex-start;
   }
->>>>>>> 4c148b16e2cf21ee1a05777f6f011f44d6ca1b9d
 }
