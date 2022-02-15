@@ -376,7 +376,7 @@ p {
   display: flex;
   flex-direction: column;
   background-color: #f9f9fa;
-  gap: 8px;
+  gap: 20px;
 }
 
 .footer h2 {
