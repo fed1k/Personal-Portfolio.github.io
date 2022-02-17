@@ -741,7 +741,7 @@ i {
   }
 
   .desktop-project-section-image {
-    width: 80%;
+    width: 100%;
     height: 100%;
     display: inline;
   }
@@ -978,6 +978,6 @@ i {
   .social-icons-cont {
     display: flex;
     justify-content: flex-end;
-    align-items: flex-start;
+    align-items: center;
   }
 }
