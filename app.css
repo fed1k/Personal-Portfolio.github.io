@@ -536,6 +536,7 @@ i {
     height: 70px;
     transition: all 0.6s ease-in-out;
     margin-top: 30px;
+    margin-left: 0;
   }
 
   .start:hover {
@@ -555,7 +556,7 @@ i {
   }
 
   .welcome-section h1 {
-    font-size: 90px;
+    font-size: 75px;
     padding-bottom: 20px;
     padding-top: 0;
     width: auto;
@@ -586,7 +587,7 @@ i {
   }
 
   .welcome-section p {
-    width: 484px;
+    width: 400px;
     padding: 0;
   }
 
