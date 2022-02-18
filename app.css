@@ -561,7 +561,7 @@ i {
     padding-top: 0;
     width: auto;
     margin: 0;
-    animation: fullname 3s ease-in-out 0s 1;
+    animation: fullname 3.6s ease-in-out 0s 1;
   }
 
   @keyframes fullname {
