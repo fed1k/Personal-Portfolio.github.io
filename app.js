@@ -42,58 +42,45 @@ form.addEventListener('submit', (e) => {
 });
 
 // Popup window details section starts here
-// const popup = [
-//   card1 = {
-//     name: 'First Project',
-//     description: 'Lorem ipsum dolor sit amet, consectetur ',
-//     technologies: ['HTML/CSS', 'Ruby on Rails', 'Javascript'],
-//     live: 'https://fed1k.github.io/Personal-Portfolio.github.io/',
-//     source: 'https://github.com/fed1k/Personal-Portfolio.github.io',
-//   },
-//   card2 = {
-//     name: 'Second Project',
-//     description: 'Lorem ipsum dolor sit amet, consectetur isi',
-//     technologies: ['HTML/CSS', 'Ruby on Rails', 'Javascript'],
-//     live: 'https://fed1k.github.io/Personal-Portfolio.github.io/',
-//     source: 'https://github.com/fed1k/Personal-Portfolio.github.io',
-//   },
-//   card3 = {
-//     name: 'Third Project',
-//     description: 'Lorem ipsum dolor sit amnt ut labore et dolorenisi',
-//     technologies: ['HTML/CSS', 'Ruby on Rails', 'Javascript'],
-//     live: 'https://fed1k.github.io/Personal-Portfolio.github.io/',
-//     source: 'https://github.com/fed1k/Personal-Portfolio.github.io',
-//   },
-//   card4 = {
-//     name: 'Fourth Project',
-//     description: 'Lorem ipsum dolor siabtion ullamco laboris nisi',
-//     technologies: ['HTML/CSS', 'Ruby on Rails', 'Javascript'],
-//     live: 'https://fed1k.github.io/Personal-Portfolio.github.io/',
-//     source: 'https://github.com/fed1k/Personal-Portfolio.github.io',
-//   },
-//   card5 = {
-//     name: 'Fifth Project',
-//     description: 'Lorem ipsum dolor sit ametabore et dolore magna aliqua. Ut enim ad',
-//     technologies: ['HTML/CSS', 'Ruby on Rails', 'Javascript'],
-//     live: 'https://fed1k.github.io/Personal-Portfolio.github.io/',
-//     source: 'https://github.com/fed1k/Personal-Portfolio.github.io',
-//   },
-//   card6 = {
-//     name: 'Sixth Project',
-//     description: 'Lorem ipsum dolor sit amet, conseabore et dolorei',
-//     technologies: ['HTML/CSS', 'Ruby on Rails', 'Javascript'],
-//     live: 'https://fed1k.github.io/Personal-Portfolio.github.io/',
-//     source: 'https://github.com/fed1k/Personal-Portfolio.github.io',
-//   },
-// ];
+const popup = [
+  cards = {
+    name: 'Project name goes here',
+    description: 'Lorem ipsum dolor sit amet, conseabore et dolorei',
+    technologies: ['HTML/CSS', 'Ruby on Rails', 'Javascript'],
+    live: 'https://fed1k.github.io/Personal-Portfolio.github.io/',
+    source: 'https://github.com/fed1k/Personal-Portfolio.github.io',
+    cardClass: ['card1', 'card2', 'card3', 'card4', 'card5', 'card6'],
+    imageClass: ['images1', 'images2', 'images3', 'images4', 'images5', 'images6'],
+    imageSource: ['images/Rectangle-21.png', 'images/Rectangle-21-1.png', 'images/Rectangle-21-2.png', 'images/Rectangle-21-3.png', 'images/Rectangle-21-4.png', 'images/Rectangle-21-5.png'],
+  },
+];
+// Card1
+const shape = document.querySelector('.shape-container');
+for (let i = 0; i < 2; i++) {
+  const karta = document.createElement('section');
+  const body = document.querySelector('.projects');
+  karta.className = popup[0].cardClass[i];
+  body.insertBefore(karta, shape);
+  const rasm = document.createElement('img');
+  rasm.className = popup[0].imageClass[i];
+  rasm.src = popup[0].imageSource[i];
+  const divider = document.createElement('div');
+  karta.append(rasm, divider);
+  divider.className = 'color';
+  const header = document.createElement('h2');
+  header.textContent = popup[0].name;
+  const ulcont = document.createElement('ul');
+  const list = document.createElement('li');
+  list.textContent = 'HTML/CSS';
+  const list2 = document.createElement('li');
+  list2.textContent = 'Ruby on Rails';
+  const list3 = document.createElement('li');
+  list3.textContent = 'Javascript';
+  ulcont.append(list, list2, list3);
+  const btn = document.createElement('button');
+  btn.className = 'see';
+  btn.textContent = 'See this project';
+  divider.append(header, ulcont, btn);
+}
 
-// const seebtn = document.querySelectorAll('.see');
-// seebtn.forEach((own) => {
-//   own.addEventListener('click', () => {
-//     const conteyner = document.createElement('section');
-//     const body = document.querySelector('body');
-//     conteyner.className = 'mobile';
-//     body.appendChild(conteyner);
-//     conteyner.insertBefore(ul);
-//   });
-// });
+// Card2
