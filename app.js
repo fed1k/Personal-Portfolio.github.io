@@ -5,7 +5,6 @@ const item3 = document.querySelector('.item3');
 const ul = document.querySelector('.navbar ul');
 const li = document.querySelectorAll('.scrolList');
 const navbar = document.querySelector('.navbar');
-// const mainDiv = document.createElement('div');
 const form = document.querySelector('.form');
 const email = document.querySelector('#email');
 const error = document.querySelector('.error-message');
