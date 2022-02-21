@@ -19,7 +19,7 @@ It is a show of my understanding of Gitflow, use of Linters, HTML5 semantics, CS
 
 ## Live Demo
 Live site URL to portfolio
-[Live Demo Link](https://fed1k.github.io/)
+[Live Demo Link](https://fed1k.github.io/Personal-Portfolio.github.io/)
 
 
 ## Getting Started
