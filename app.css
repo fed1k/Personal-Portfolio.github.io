@@ -63,7 +63,7 @@
 }
 
 .menu-icon {
-  height: 10px;
+  /* height: 10px; */
   width: 100%;
   position: fixed;
   transform: translate(80vw, 5vw);
