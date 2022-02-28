@@ -44,9 +44,8 @@ form.addEventListener('submit', (e) => {
 });
 
 // Popup object
-let cards;
 const popup = [
-  cards = {
+  {
     name: 'Project name goes here',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisiUt aliquip ex ea commodo consequat.  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.',
     technologies: ['HTML/CSS', 'Ruby on Rails', 'Javascript'],
@@ -173,7 +172,3 @@ decoration4.className = 'shape-container5';
 decoration3.id = 'desktop-shapes';
 decoration3.src = 'images/image-geometry555.png';
 shape3.append(decoration3, decoration4);
-
-if (cards === 0) {
-  console.log('fed');
-}
