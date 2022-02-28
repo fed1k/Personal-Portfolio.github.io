@@ -8,6 +8,8 @@ const navbar = document.querySelector('.navbar');
 const form = document.querySelector('.form');
 const email = document.querySelector('#email');
 const error = document.querySelector('.error-message');
+const formbutton = document.querySelector('.form-button');
+const body = document.querySelector('.projects');
 
 menuicon.addEventListener('click', () => {
   navbar.classList.toggle('navigation');
@@ -42,10 +44,13 @@ form.addEventListener('submit', (e) => {
 });
 
 // Popup window details section starts here
+
+// Popup object
+let cards;
 const popup = [
   cards = {
     name: 'Project name goes here',
-    description: 'Lorem ipsum dolor sit amet, conseabore et dolorei',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisiUt aliquip ex ea commodo consequat.  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.',
     technologies: ['HTML/CSS', 'Ruby on Rails', 'Javascript'],
     live: 'https://fed1k.github.io/Personal-Portfolio.github.io/',
     source: 'https://github.com/fed1k/Personal-Portfolio.github.io',
@@ -54,33 +59,123 @@ const popup = [
     imageSource: ['images/Rectangle-21.png', 'images/Rectangle-21-1.png', 'images/Rectangle-21-2.png', 'images/Rectangle-21-3.png', 'images/Rectangle-21-4.png', 'images/Rectangle-21-5.png'],
   },
 ];
-// Card1
-const shape = document.querySelector('.shape-container');
-for (let i = 0; i < 2; i++) {
+
+// Creating popupWindow
+let modalContainer;
+function popupWindow(imageSrc) {
+  menuicon.style.display = 'none';
+  navbar.style.display = 'none';
+  formbutton.style.display = 'none';
+  modalContainer = document.createElement('section');
+  modalContainer.className = 'modalContainer';
+  modalContainer.innerHTML = `
+    <section class="modal">
+      <div class="xCont">
+        <h1 class="popuph">${popup[0].name}</h1>
+        <img class="x" src="images/x-sign.png">
+      </div>
+        <ul class="populli">
+        <li class="popList">${popup[0].technologies[0]}</li>
+        <li class="popList">${popup[0].technologies[1]}</li>
+        <li class="popList">${popup[0].technologies[2]}</li>
+      </ul>
+      <div>
+        <img class="popupimg1" src="${imageSrc}">  
+        <img class="popupimg" src="${imageSrc}">
+        <img class="popupimg" src="${imageSrc}">
+        <img class="popupimg" src="${imageSrc}">
+        <img class="popupimg" src="${imageSrc}">
+      </div>
+      <p class="modalp">${popup[0].description}</p>
+      <div class="popbtncontainer">
+        <button class="button1"><a class="popupA" href="${popup[0].live}">See live<i class="fas fa-external-link-alt modalicon"></i></a></button>
+        <button class="button2"><a class="popupA" href="${popup[0].source}" target="_blank">See source<i class="fab fa-github modalicon modalicon2"></i></a></button>
+      </div>
+    </section>
+    `;
+  body.appendChild(modalContainer);
+  const modalicon = document.querySelector('.modalicon');
+  const modalicon2 = document.querySelector('.modalicon2');
+  const button1 = document.querySelector('.button1');
+  const button2 = document.querySelector('.button2');
+  function hover(a, b) {
+    a.addEventListener('mouseover', () => {
+      b.classList.add('mkb');
+    });
+    a.addEventListener('mouseout', () => {
+      b.classList.remove('mkb');
+    });
+  }
+  hover(button1, modalicon);
+  hover(button2, modalicon2);
+  const x = document.querySelectorAll('.x');
+  x.forEach((xelem) => {
+    xelem.addEventListener('click', () => {
+      modalContainer.style.display = 'none';
+      formbutton.style.display = 'block';
+    });
+  });
+}
+// Creating Projects section dynamically
+let btn;
+for (let i = 0; i < 6; i += 1) {
   const karta = document.createElement('section');
-  const body = document.querySelector('.projects');
   karta.className = popup[0].cardClass[i];
-  body.insertBefore(karta, shape);
+  body.append(karta);
   const rasm = document.createElement('img');
   rasm.className = popup[0].imageClass[i];
   rasm.src = popup[0].imageSource[i];
   const divider = document.createElement('div');
   karta.append(rasm, divider);
-  divider.className = 'color';
+  if (i === 0) {
+    divider.className = 'color';
+  } else if (i === 5) {
+    divider.className = 'color2';
+  }
   const header = document.createElement('h2');
   header.textContent = popup[0].name;
   const ulcont = document.createElement('ul');
-  const list = document.createElement('li');
-  list.textContent = 'HTML/CSS';
-  const list2 = document.createElement('li');
-  list2.textContent = 'Ruby on Rails';
-  const list3 = document.createElement('li');
-  list3.textContent = 'Javascript';
-  ulcont.append(list, list2, list3);
-  const btn = document.createElement('button');
+  for (let i = 0; i < 3; i += 1) {
+    const list = document.createElement('li');
+    list.textContent = popup[0].technologies[i];
+    ulcont.appendChild(list);
+  }
+  btn = document.createElement('button');
   btn.className = 'see';
   btn.textContent = 'See this project';
+  btn.addEventListener('click', () => {
+    popupWindow(popup[0].imageSource[i]);
+  });
   divider.append(header, ulcont, btn);
 }
+const shape = document.createElement('div');
+const karta6 = document.querySelector('.card6');
+body.insertBefore(shape, karta6);
+shape.className = 'shape-container';
+const decoration = document.createElement('img');
+decoration.src = 'images/image-geometry2.png';
+decoration.className = 'desktop-project-section-image';
+shape.appendChild(decoration);
+const shape2 = document.createElement('div');
+const karta5 = document.querySelector('.card5');
+body.insertBefore(shape2, karta5);
+shape2.className = 'shape-container3';
+const decoration2 = document.createElement('img');
+decoration2.className = 'round-shape';
+decoration2.src = 'images/Sha.png';
+shape2.appendChild(decoration2);
+const shape3 = document.createElement('div');
+shape3.className = 'shape-container4';
+const karta4 = document.querySelector('.card4');
+body.insertBefore(shape3, karta4);
+const decoration3 = document.createElement('img');
+const decoration4 = document.createElement('img');
+decoration4.src = 'images/image-geometry444.png';
+decoration4.className = 'shape-container5';
+decoration3.id = 'desktop-shapes';
+decoration3.src = 'images/image-geometry555.png';
+shape3.append(decoration3, decoration4);
 
-// Card2
+if (cards === 0) {
+  console.log('fed');
+}
