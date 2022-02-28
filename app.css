@@ -1088,4 +1088,59 @@ i {
     justify-content: flex-end;
     align-items: flex-start;
   }
+
+  .modal {
+    width: 100%;
+    height: 100%;
+    padding: 40px;
+  }
+
+  .modalContainer {
+    background-color: #1a2236;
+    padding: 40px;
+  }
+
+  .popuph {
+    font-size: 50px;
+    padding-bottom: 10px;
+  }
+
+  .popupimg1 {
+    width: 100%;
+    height: 600px;
+  }
+
+  .popupimg {
+    width: 23%;
+    height: 15%;
+  }
+
+  .modalp {
+    width: 50vw;
+    padding: 50px 0;
+    align-self: center;
+  }
+
+  .populli {
+    padding-bottom: 40px;
+  }
+
+  .popbtncontainer {
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+  }
+
+  .popList {
+    font-size: 20px;
+  }
+
+  .x {
+    width: 32px;
+    height: 32px;
+  }
+
+  .mkb {
+    color: #fff;
+  }
 }
