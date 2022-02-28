@@ -5,10 +5,11 @@ const item3 = document.querySelector('.item3');
 const ul = document.querySelector('.navbar ul');
 const li = document.querySelectorAll('.scrolList');
 const navbar = document.querySelector('.navbar');
-// const mainDiv = document.createElement('div');
 const form = document.querySelector('.form');
 const email = document.querySelector('#email');
 const error = document.querySelector('.error-message');
+const formbutton = document.querySelector('.form-button');
+const body = document.querySelector('.projects');
 
 menuicon.addEventListener('click', () => {
   navbar.classList.toggle('navigation');
@@ -42,107 +43,137 @@ form.addEventListener('submit', (e) => {
   }
 });
 
-// Popup window details section starts here
-// const popup = [
-//   {
-//     name: 'First Project',
-//     description: 'Lorem ipsum dolor sit amet, consectetur ',
-//     technologies: ['HTML/CSS', 'Ruby on Rails', 'Javascript'],
-//     live: 'https://fed1k.github.io/Personal-Portfolio.github.io/',
-//     source: 'https://github.com/fed1k/Personal-Portfolio.github.io',
-//   },
-// ];
+// Popup object
+let cards;
+const popup = [
+  cards = {
+    name: 'Project name goes here',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisiUt aliquip ex ea commodo consequat.  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.',
+    technologies: ['HTML/CSS', 'Ruby on Rails', 'Javascript'],
+    live: 'https://fed1k.github.io/Personal-Portfolio.github.io/',
+    source: 'https://github.com/fed1k/Personal-Portfolio.github.io',
+    cardClass: ['card1', 'card2', 'card3', 'card4', 'card5', 'card6'],
+    imageClass: ['images1', 'images2', 'images3', 'images4', 'images5', 'images6'],
+    imageSource: ['images/Rectangle-21.png', 'images/Rectangle-21-1.png', 'images/Rectangle-21-2.png', 'images/Rectangle-21-3.png', 'images/Rectangle-21-4.png', 'images/Rectangle-21-5.png'],
+  },
+];
 
-// function createProject(image, className) {
-//   const project = `
-//       <section class="card1">
-//           <img class="images1" src="${image}" alt="Laptop" />
-//           <div class="color">
-//             <h2>Project name goes here</h2>
-//             <ul>
-//               <li>HTML/CSS</li>
-//               <li>Ruby on Rails</li>
-//               <li>Javascript</li>
-//             </ul>
-// <button class="see" onclick="popupModel('.${className}')" type="button">See this project</button>
-//           </div>
-//       </section>
-//   `;
+// Creating popupWindow
+let modalContainer;
+function popupWindow(imageSrc) {
+  menuicon.style.display = 'none';
+  navbar.style.display = 'none';
+  formbutton.style.display = 'none';
+  modalContainer = document.createElement('section');
+  modalContainer.className = 'modalContainer';
+  modalContainer.innerHTML = `
+    <section class="modal">
+      <div class="xCont">
+        <h1 class="popuph">${popup[0].name}</h1>
+        <img class="x" src="images/x-sign.png">
+      </div>
+        <ul class="populli">
+        <li class="popList">${popup[0].technologies[0]}</li>
+        <li class="popList">${popup[0].technologies[1]}</li>
+        <li class="popList">${popup[0].technologies[2]}</li>
+      </ul>
+      <div>
+        <img class="popupimg1" src="${imageSrc}">  
+        <img class="popupimg" src="${imageSrc}">
+        <img class="popupimg" src="${imageSrc}">
+        <img class="popupimg" src="${imageSrc}">
+        <img class="popupimg" src="${imageSrc}">
+      </div>
+      <p class="modalp">${popup[0].description}</p>
+      <div class="popbtncontainer">
+        <button class="button1"><a class="popupA" href="${popup[0].live}">See live<i class="fas fa-external-link-alt modalicon"></i></a></button>
+        <button class="button2"><a class="popupA" href="${popup[0].source}" target="_blank">See source<i class="fab fa-github modalicon modalicon2"></i></a></button>
+      </div>
+    </section>
+    `;
+  body.appendChild(modalContainer);
+  const modalicon = document.querySelector('.modalicon');
+  const modalicon2 = document.querySelector('.modalicon2');
+  const button1 = document.querySelector('.button1');
+  const button2 = document.querySelector('.button2');
+  function hover(a, b) {
+    a.addEventListener('mouseover', () => {
+      b.classList.add('mkb');
+    });
+    a.addEventListener('mouseout', () => {
+      b.classList.remove('mkb');
+    });
+  }
+  hover(button1, modalicon);
+  hover(button2, modalicon2);
+  const x = document.querySelectorAll('.x');
+  x.forEach((xelem) => {
+    xelem.addEventListener('click', () => {
+      modalContainer.style.display = 'none';
+      formbutton.style.display = 'block';
+    });
+  });
+}
+// Creating Projects section dynamically
+let btn;
+for (let i = 0; i < 6; i += 1) {
+  const karta = document.createElement('section');
+  karta.className = popup[0].cardClass[i];
+  body.append(karta);
+  const rasm = document.createElement('img');
+  rasm.className = popup[0].imageClass[i];
+  rasm.src = popup[0].imageSource[i];
+  const divider = document.createElement('div');
+  karta.append(rasm, divider);
+  if (i === 0) {
+    divider.className = 'color';
+  } else if (i === 5) {
+    divider.className = 'color2';
+  }
+  const header = document.createElement('h2');
+  header.textContent = popup[0].name;
+  const ulcont = document.createElement('ul');
+  for (let i = 0; i < 3; i += 1) {
+    const list = document.createElement('li');
+    list.textContent = popup[0].technologies[i];
+    ulcont.appendChild(list);
+  }
+  btn = document.createElement('button');
+  btn.className = 'see';
+  btn.textContent = 'See this project';
+  btn.addEventListener('click', () => {
+    popupWindow(popup[0].imageSource[i]);
+  });
+  divider.append(header, ulcont, btn);
+}
+const shape = document.createElement('div');
+const karta6 = document.querySelector('.card6');
+body.insertBefore(shape, karta6);
+shape.className = 'shape-container';
+const decoration = document.createElement('img');
+decoration.src = 'images/image-geometry2.png';
+decoration.className = 'desktop-project-section-image';
+shape.appendChild(decoration);
+const shape2 = document.createElement('div');
+const karta5 = document.querySelector('.card5');
+body.insertBefore(shape2, karta5);
+shape2.className = 'shape-container3';
+const decoration2 = document.createElement('img');
+decoration2.className = 'round-shape';
+decoration2.src = 'images/Sha.png';
+shape2.appendChild(decoration2);
+const shape3 = document.createElement('div');
+shape3.className = 'shape-container4';
+const karta4 = document.querySelector('.card4');
+body.insertBefore(shape3, karta4);
+const decoration3 = document.createElement('img');
+const decoration4 = document.createElement('img');
+decoration4.src = 'images/image-geometry444.png';
+decoration4.className = 'shape-container5';
+decoration3.id = 'desktop-shapes';
+decoration3.src = 'images/image-geometry555.png';
+shape3.append(decoration3, decoration4);
 
-//   return project;
-// }
-
-// const projects = document.querySelector('.projects');
-// const projectImages = [
-//   'images/Rectangle-21.png',
-//   'images/Rectangle-21-1.png',
-//   'images/Rectangle-21-2.png',
-//   'images/Rectangle-21-3.png',
-//   'images/Rectangle-21-4.png',
-//   'images/Rectangle-21-5.png',
-// ];
-
-// const arrClassName = ['card1', 'card2', 'card3', 'card4', 'card5', 'card6'];
-
-// for (let i = 0; i < 6; i += 1) {
-//   projects.innerHTML += createProject(projectImages[i], arrClassName[i]);
-// }
-
-// function popupModel(name) {
-//   const h2 = document.createElement('h2');
-//   const div = document.createElement('div');
-//   div.className = 'heading-div';
-//   h2.className = 'heading';
-//   h2.innerHTML = 'project name goes here';
-//   const icon = document.createElement('i');
-//   icon.className = 'fa fa-times times';
-//   div.append(h2, icon);
-
-//   icon.addEventListener('click', () => {
-//     mainDiv.classList.toggle('hidden');
-//   });
-
-//   const ul = document.createElement('ul');
-//   ul.className = 'languagesContainer';
-
-//   const languages = popup[0].technologies;
-//   for (let i = 0; i < languages.length; i += 1) {
-//     const li = document.createElement('li');
-//     li.className = 'list';
-//     li.innerHTML = languages[i];
-//     ul.appendChild(li);
-//   }
-
-//   const image = document.createElement('img');
-//   image.className = 'projectImage';
-//   image.src = 'images/Rectangle-21-5.png';
-
-//   const description = document.createElement('p');
-//   description.className = 'projectDescription';
-//   description.innerHTML = 'Lorem ipsum dolor ;
-//   const arrName = ['See live', 'Live Source'];
-//   const arrIcon = [
-//     'fas fa-external-link-alt btnIcon',
-//     'fab fa-github btnIcon',
-//   ];
-
-//   const buttonDiv = document.createElement('div');
-//   buttonDiv.className = 'parentButtonDiv';
-
-//   for (let i = 0; i < 2; i += 1) {
-//     const icon = document.createElement('i');
-//     const button = document.createElement('button');
-
-//     button.className = 'projectButton';
-//     icon.className = arrIcon[i];
-//     button.append(arrName[i], icon);
-//     buttonDiv.appendChild(button);
-//   }
-
-//   mainDiv.className = 'main-popup-div';
-//   mainDiv.append(h2, icon, ul, languages, image, description, buttonDiv);
-
-//   const card = document.querySelector(name);
-
-//   card.appendChild(mainDiv);
-// }
+if (cards === 0) {
+  console.log('fed');
+}
