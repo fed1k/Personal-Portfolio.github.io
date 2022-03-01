@@ -178,7 +178,8 @@
 
 /* Welcome section starts */
 .section {
-  background-image: url(images/image-geometry-2.png),
+  background-image: 
+    url(images/image-geometry-2.png),
     url(images/image-geometry-1.png);
   background-size: 253px, 130px;
   background-repeat: no-repeat;
@@ -1154,6 +1155,7 @@ i {
     color: #fff;
   }
 }
+
 /* Tablet version here */
 @media (min-width: 500px) and (max-width: 992px) {
   .projects {
