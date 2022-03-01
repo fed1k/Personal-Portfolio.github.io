@@ -76,6 +76,7 @@
 .modalp {
   padding: 25px 0;
   width: auto;
+  font-size: 18px;
 }
 
 .popupimg1 {
@@ -153,11 +154,9 @@
 }
 
 .menu-icon {
-  /* height: 10px; */
   width: 100%;
   position: fixed;
-  transform: translate(80vw, 5vw);
-  z-index: 3;
+  transform: translate(85vw, 5vw);
 }
 
 .menu-icon div {
@@ -1127,7 +1126,6 @@ i {
     width: 50vw;
     padding: 50px 0;
     align-self: center;
-    font-size: 18px;
   }
 
   .populli {
@@ -1151,5 +1149,17 @@ i {
 
   .mkb {
     color: #fff;
+  }
+}
+/* Tablet version here */
+@media (min-width: 500px) and (max-width: 992px){
+  .projects {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 5px;
+    padding: 0 5px;
+  }
+  
+  .div-container {
+    grid-column: span 2;
   }
 }
