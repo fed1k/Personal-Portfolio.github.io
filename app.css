@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins:wght@300;400;500;600&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins:wght@300;400;500;600&display=swap');
 
 * {
   margin: 0;
@@ -202,7 +202,7 @@ p {
 }
 
 .section h1 {
-  font-family: "Playfair Display", serif;
+  font-family: 'Playfair Display', serif;
   font-size: 40px;
   font-weight: 400;
   width: 90%;
@@ -238,7 +238,7 @@ p {
 }
 
 .projects h2 {
-  font-family: "Playfair Display", serif;
+  font-family: 'Playfair Display', serif;
   font-weight: 400;
   font-style: normal;
   font-size: 50px;
@@ -377,7 +377,7 @@ p {
 }
 
 .about h2 {
-  font-family: "Playfair Display", serif;
+  font-family: 'Playfair Display', serif;
   font-weight: 400;
   font-size: 50px;
   padding: 0 0 13px 35px;
@@ -493,7 +493,7 @@ p {
 
 .footer h2 {
   padding: 106px 53px 15px 18px;
-  font-family: "Playfair Display", serif;
+  font-family: 'Playfair Display', serif;
   font-weight: 400;
   font-size: 50px;
 }
@@ -565,6 +565,10 @@ p {
   background-color: #1a2236;
   color: #fff;
   padding: 0;
+}
+
+.form input {
+  padding-left: 10px;
 }
 
 i {
@@ -1027,12 +1031,12 @@ i {
     display: block;
     padding-left: 3%;
     font-size: 110px;
-    font-family: "Playfair Display", serif;
+    font-family: 'Playfair Display', serif;
     font-weight: 400;
   }
 
   .about h2 {
-    font-family: "Playfair Display", serif;
+    font-family: 'Playfair Display', serif;
     font-weight: 400;
     font-size: 110px;
     padding: 0;
@@ -1151,14 +1155,15 @@ i {
     color: #fff;
   }
 }
+
 /* Tablet version here */
-@media (min-width: 500px) and (max-width: 992px){
+@media (min-width: 500px) and (max-width: 992px) {
   .projects {
     grid-template-columns: 1fr 1fr;
     grid-gap: 5px;
     padding: 0 5px;
   }
-  
+
   .div-container {
     grid-column: span 2;
   }
