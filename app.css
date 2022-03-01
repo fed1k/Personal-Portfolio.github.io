@@ -53,7 +53,8 @@
   align-items: center;
 }
 
-.button1, .button2 {
+.button1,
+.button2 {
   height: 51px;
   width: 246px;
   font-weight: 500;
