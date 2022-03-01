@@ -58,7 +58,7 @@
   height: 51px;
   width: 246px;
   font-weight: 500;
-  font-family: 'Poppins', serif;
+  font-family: "Poppins", serif;
   font-size: 18px;
   margin-bottom: 15px;
   color: #1a2236;
@@ -330,7 +330,7 @@ p {
   padding: 3px 10px;
   border: 1px solid #1a2236;
   color: #324556;
-  font-family: 'Poppins', serif;
+  font-family: "Poppins", serif;
   font-weight: 300;
 }
 
@@ -986,7 +986,7 @@ i {
 
   .lorem {
     width: 548px;
-    padding: 0 0 82px 0;
+    padding: 0 0 82px;
     margin: 0;
   }
 
@@ -1151,14 +1151,15 @@ i {
     color: #fff;
   }
 }
+
 /* Tablet version here */
-@media (min-width: 500px) and (max-width: 992px){
+@media (min-width: 500px) and (max-width: 992px) {
   .projects {
     grid-template-columns: 1fr 1fr;
     grid-gap: 5px;
     padding: 0 5px;
   }
-  
+
   .div-container {
     grid-column: span 2;
   }
