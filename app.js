@@ -31,6 +31,10 @@ li.forEach((i) => {
   i.addEventListener('click', myToggle);
 });
 
+function saveData(data) {
+  const stringyData = JSON.stringify(data);
+  window.localStorage.setItem('customFormData', stringyData);
+}
 form.addEventListener('submit', (e) => {
   const Emailtext = email.value;
   if (Emailtext !== Emailtext.toLowerCase()) {
@@ -40,6 +44,15 @@ form.addEventListener('submit', (e) => {
     error.textContent = 'Please your email should be in lower case';
   } else {
     error.textContent = '';
+    // Preserve data in the browser
+    const formData = {};
+    const inputs = document.querySelectorAll('input');
+    const textArea = document.querySelector('textarea');
+    inputs.forEach((input) => {
+      formData[input.id] = input.value;
+    });
+    formData[textArea.id] = textArea.value;
+    saveData(formData);
   }
 });
 
@@ -172,17 +185,3 @@ decoration4.className = 'shape-container5';
 decoration3.id = 'desktop-shapes';
 decoration3.src = 'images/image-geometry555.png';
 shape3.append(decoration3, decoration4);
-
-// Preserving data in the local storage
-function getFormData() {
-  body.querySelectorAll('input').forEach((input) => {
-    formData[input.id] = input.value;
-  });
-  const textArea = document.querySelector('textarea');
-  formData[textArea.id] = textArea.value;
-}
-const formData = {};
-window.localStorage.portfolioFormData = {};
-window.addEventListener('load', () => {
-
-});
