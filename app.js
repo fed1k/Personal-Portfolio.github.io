@@ -185,3 +185,21 @@ decoration4.className = 'shape-container5';
 decoration3.id = 'desktop-shapes';
 decoration3.src = 'images/image-geometry555.png';
 shape3.append(decoration3, decoration4);
+
+// Persist form data to local storage
+// Persist data on submit event handler starts on line 47
+
+// Helper function to reinsert values
+function reinsertValues(formData) {
+  for (let key in formData) {
+    document.getElementById(key).value = formData[key];
+  }
+}
+
+// Reinsert form data values if data persisted
+window.addEventListener('load', () => {
+  const formDataObj = JSON.parse(window.localStorage.getItem('customFormData'))
+  if (formDataObj) {
+    reinsertValues(formDataObj)
+  }
+})
