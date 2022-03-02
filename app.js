@@ -172,3 +172,17 @@ decoration4.className = 'shape-container5';
 decoration3.id = 'desktop-shapes';
 decoration3.src = 'images/image-geometry555.png';
 shape3.append(decoration3, decoration4);
+
+// Preserving data in the local storage
+function getFormData() {
+  body.querySelectorAll('input').forEach((input) => {
+    formData[input.id] = input.value;
+  });
+  const textArea = document.querySelector('textarea');
+  formData[textArea.id] = textArea.value;
+}
+const formData = {};
+window.localStorage.portfolioFormData = {};
+window.addEventListener('load', () => {
+
+});
