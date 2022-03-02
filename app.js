@@ -191,15 +191,16 @@ shape3.append(decoration3, decoration4);
 
 // Helper function to reinsert values
 function reinsertValues(formData) {
-  for (let key in formData) {
-    document.getElementById(key).value = formData[key];
-  }
+  Object.entries(formData).forEach((ele) => {
+    const [key, value] = ele;
+    document.getElementById(key).value = value;
+  });
 }
 
 // Reinsert form data values if data persisted
 window.addEventListener('load', () => {
-  const formDataObj = JSON.parse(window.localStorage.getItem('customFormData'))
+  const formDataObj = JSON.parse(window.localStorage.getItem('customFormData'));
   if (formDataObj) {
-    reinsertValues(formDataObj)
+    reinsertValues(formDataObj);
   }
-})
+});
