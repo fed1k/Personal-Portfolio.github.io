@@ -187,7 +187,7 @@ function saveData(data) {
 // Event listener to persist data
 document.querySelector('.form').addEventListener('change', () => {
   // Preserve data in the browser
-  const inputs = document.querySelectorAll('input');
+  const inputs = document.querySelector('input');
   const textArea = document.querySelector('textarea');
   inputs.forEach((input) => {
     formData[input.id] = input.value;
@@ -200,7 +200,7 @@ document.querySelector('.form').addEventListener('change', () => {
 function reinsertValues(formData) {
   Object.entries(formData).forEach((ele) => {
     const [key, value] = ele;
-    document.getElementsById(key).value = value;
+    document.getElementById(key).value = value;
   });
 }
 
