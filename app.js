@@ -200,7 +200,7 @@ document.querySelector('.form').addEventListener('change', () => {
 function reinsertValues(formData) {
   Object.entries(formData).forEach((ele) => {
     const [key, value] = ele;
-    document.getElementById(key).value = value;
+    document.getElementsById(key).value = value;
   });
 }
 
