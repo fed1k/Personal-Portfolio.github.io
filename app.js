@@ -53,7 +53,7 @@ const popup = [
     source: 'https://github.com/fed1k/Personal-Portfolio.github.io',
     cardClass: ['card1', 'card2', 'card3', 'card4', 'card5', 'card6'],
     imageClass: ['images1', 'images2', 'images3', 'images4', 'images5', 'images6'],
-    imageSource: ['images/day.png', 'images/Rectangle-21-1.png', 'images/Rectangle-21-2.png', 'images/Rectangle-21-3.png', 'images/Rectangle-21-4.png', 'images/Rectangle-21-5.png'],
+    imageSource: ['images/Rectangle-21.png', 'images/Rectangle-21-1.png', 'images/Rectangle-21-2.png', 'images/Rectangle-21-3.png', 'images/Rectangle-21-4.png', 'images/Rectangle-21-5.png'],
   },
 ];
 
